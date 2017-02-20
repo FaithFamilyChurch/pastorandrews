@@ -56,14 +56,13 @@ a {
 }
 
 .mainwrapper {
-	width:1000px;
+	width:1050px;
 	margin-left:auto;
 	margin-right:auto;
-	background-color:#FFF;
+	background-color:#e7e0d6;
 	height:100%;
 	border-left:1px solid #ddd;
 	border-right:1px solid #ddd;
-	padding-left:10px;
-	padding-right:10px;
+	padding:75px;
 	min-height:850px;
 }
