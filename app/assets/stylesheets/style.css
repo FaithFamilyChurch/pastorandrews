@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'Abadi MT Condensed';
+    src: url('Abadi MT Condensed Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ShreeDev0714';
+    src: url('ShreeDev0714.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SignPainter-HouseScript';
+    src: url('SignPainter-HouseScript.ttf') format('truetype');
+}
+
+
 *:before, *:after {
     box-sizing: border-box;
 }
@@ -15,6 +31,44 @@ html, body {
 a {
 	text-decoration:none !important;
 	outline:none !important;
+}
+
+.titlewrapper {
+    font-family:'ShreeDev0714';
+    width:330px;
+    margin-left:auto;
+    margin-right:auto;
+/*     color:#e7e0d6; */
+    color:#c5c0b4;
+}
+
+.title {
+    font-size:35px;
+    text-transform:uppercase;
+    text-align:center;
+}
+
+.titlepastor {
+    color:#818070;
+    font-weight:bold;
+}
+
+.titlelinks {
+    text-transform: lowercase;
+    font-size: 21px;
+    padding-top: 10px;
+    text-align: center;
+    width: 75%;
+    border-top: 1px solid;
+    margin-left: auto;
+    margin-right: auto;}
+
+.titlelink {
+    width:33%;
+    text-align:center;
+    display:block;
+    float:left;
+    color:#c5c0b4;
 }
 
 .fl {
