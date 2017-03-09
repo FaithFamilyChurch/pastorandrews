@@ -1,0 +1,38 @@
+
+@font-face {
+    font-family: 'Abadi MT Condensed';
+    src: url('Abadi MT Condensed Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SignPainter-HouseScript';
+    src: url('SignPainter-HouseScript.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ShreeDev0714';
+    src: url('ShreeDev0714.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ShreeDev0714';
+    src: url('ShreeDev0714-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ShreeDev0714';
+    src: url('ShreeDev0714-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ShreeDev0714';
+    src: url('ShreeDev0714-Bold-Italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
