@@ -20,5 +20,6 @@
 # Ignore Byebug command history file.
 .byebug_history
 config/database.yml
+passenger.*.pid.lock
 .DS_Store
 
