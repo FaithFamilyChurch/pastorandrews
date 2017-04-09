@@ -21,5 +21,6 @@
 .byebug_history
 config/database.yml
 passenger.*.pid*
+*.bak
 .DS_Store
 
