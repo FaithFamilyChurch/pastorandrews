@@ -45,7 +45,7 @@ a:hover, a:focus {
 	margin-left:auto;
 	margin-right:auto;
 /* 	background-color:#e5e1d7; */
-    height:1850px;
+/*     height:1850px; */
 }
 
 .titlewrapper {
@@ -75,7 +75,7 @@ a:hover, a:focus {
     font-size: 21px;
     padding-top: 10px;
     text-align: center;
-    width: 80%;
+    width: 62.5%;
     border-top: 1px solid;
     margin-left: auto;
     margin-right: auto;
@@ -101,6 +101,8 @@ a:hover, a:focus {
     border-top:0 !important;
     height:500px;
     background: url(/assets/mountains_small.jpg) no-repeat center center;
+    width: 97% !important;
+    margin-left: 1.5%;
 }
 
 .welcomewrapper h1 {
@@ -111,6 +113,7 @@ a:hover, a:focus {
     font-size:50px;
     height:150px;
     line-height:160px;
+    font-family: 'ShreeDev0714' !important;
 /*     text-transform: uppercase; */
 }
 
@@ -119,7 +122,7 @@ a:hover, a:focus {
     margin-left: auto;
     margin-right: auto;
     background-color: #f7f7f7;
-    margin-top: 175px;
+    margin-top: 135px;
     box-shadow: 0px 4px 6px -2px #333;
     border-radius: 4px;
 }
@@ -128,12 +131,82 @@ a:hover, a:focus {
     height: 130px;
 }
 
+.emailform {
+    width:97%;
+    margin-left:1.5%;
+    height:100%;
+    margin-top:20px;
+}
+
+.emailformfield {
+    width:25%;
+    display:block;
+    float:left;
+    text-align:center;
+}
+
+.emailformfield input, button {
+    padding:10px;
+    border:1px solid #483D3F;
+    width:200px;
+    height:44px;
+    font-size:18px;
+    text-align:center;
+}
+
+.emailformfield button {
+    background:#FFF;
+    font-size:18px;
+}
+
 .linkswrapper {
     height: 250px;
 }
 
+.linkdiv {
+    width:30%;
+    height:100%;
+    float:left;
+    margin-left:1.5%;
+    margin-right:1.5%;
+}
+
+.linkdiv a {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: #f7f7f7;
+    height: 60px;
+    margin-top: 80px;
+    padding-top: 15px;
+    text-decoration: none;
+    color: #483D3F;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px -2px #333;
+    border-radius:4px;
+}
+
+.bloglinkdiv {
+    background: url('/assets/blog.jpg'), no-repeat; background-position: 50%; background-size: cover;
+}
+.fblinkdiv {
+    background: url('/assets/fb.jpg'), no-repeat; background-position: 50%; background-size: cover;
+}
+.rsrclinkdiv {
+    background: url('/assets/resources.jpg'), no-repeat; background-position: 50%; background-size: cover;
+}
+
 .statementwrapper{
     height:250px;
+}
+
+.missionstatement {
+    height:100%;
+    width:97%;
+    margin-left:1.5%;
 }
 
 .section {
@@ -142,6 +215,7 @@ a:hover, a:focus {
     font-family: 'ShreeDev0714' !important;
     border-top:1px solid #c4beb3;
     margin-top: 40px;
+    padding-top:40px;
 }
 
 
