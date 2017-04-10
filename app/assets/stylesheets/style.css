@@ -10,13 +10,27 @@ html, body {
 	padding: 0;
 	cursor:default;
     font-family:'ShreeDev0714';
-    background: #fff url(/assets/background2.png) 0 0 no-repeat;
-    background-size: cover;
+    background: #f7f7f7;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+/*     background: #fff url(/assets/background2.png) 0 0 no-repeat; */
+/*     background-size: cover; */
+    /*background: url(/assets/background2.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
 }
 
 a {
 	text-decoration:none !important;
 	outline:none !important;
+}
+
+a:hover, a:focus {
+    color: #483D3F !important;
+    text-decoration: none !important;
 }
 
 .site_nav {
@@ -82,36 +96,54 @@ a {
     width:100% !important;
 }
 
-.welcome {
-    float:left;
-    width:100%;
-    background-color:#333;
-    margin-top:100px;
+.welcomewrapper {
+    margin-top:75px !important;
+    border-top:0 !important;
+    height:500px;
+    background: url(/assets/mountains_small.jpg) no-repeat center center;
 }
 
-.welcome h1 {
+.welcomewrapper h1 {
     width:100%;
     text-align:center;
-    text-transform: uppercase;
-    font-family: 'ShreeDev0714' !important;
-/*     color:#c4beb3; */
-    color:#F7EFE6;
+    color:#483D3F;
+    margin:0 !important;
+    font-size:50px;
+    height:150px;
+    line-height:160px;
+/*     text-transform: uppercase; */
+}
+
+.welcome {
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f7f7f7;
+    margin-top: 175px;
+    box-shadow: 0px 4px 6px -2px #333;
+    border-radius: 4px;
+}
+
+.emailwrapper {
+    height: 130px;
+}
+
+.linkswrapper {
+    height: 250px;
+}
+
+.statementwrapper{
+    height:250px;
 }
 
 .section {
     float:left;
-    width:calc(100% - 100px);
-    height:500px;
-    padding:50px;
+    width:100%;
+    font-family: 'ShreeDev0714' !important;
+    border-top:1px solid #c4beb3;
+    margin-top: 40px;
 }
 
-.bg2 {
-/*     background-color:#c4bfb2; */
-}
-
-.bg3 {
-/*     background-color:#392d30; */
-}
 
 .bg4 {
     background-color:#e5e1d7;
@@ -154,12 +186,3 @@ a {
 	float:left;
 }
 
-.weather-main-wrapper {
-	background-color: #FFF;
-	height: calc(100% - 30px);
-	border-left: 1px solid #ddd;
-	border-right: 1px solid #ddd;
-	padding-left: 10px;
-	padding-right: 10px;
-	min-height: 700px;
-}
