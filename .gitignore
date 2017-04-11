@@ -22,5 +22,7 @@
 config/database.yml
 passenger.*.pid*
 *.bak
+*.local-access_log
+*.local-error_log
 .DS_Store
 
