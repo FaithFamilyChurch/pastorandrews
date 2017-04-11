@@ -261,6 +261,8 @@ a {
     padding: 10px;
     float: left;
     font-size:14px;
+    width:100%;
+    text-align:center;
 }
 
 .fl {
