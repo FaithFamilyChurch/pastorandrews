@@ -28,9 +28,10 @@ a {
 	outline:none !important;
 }
 
-a:hover, a:focus {
+.titlelinks > a:hover, .titlelinks > a:focus {
     color: #483D3F !important;
     text-decoration: none !important;
+    background-color:#D4D1C7;
 }
 
 .site_nav {
@@ -44,8 +45,6 @@ a:hover, a:focus {
 	width:1050px;
 	margin-left:auto;
 	margin-right:auto;
-/* 	background-color:#e5e1d7; */
-/*     height:1850px; */
 }
 
 .titlewrapper {
@@ -73,13 +72,12 @@ a:hover, a:focus {
 .titlelinks {
     text-transform: lowercase;
     font-size: 21px;
-    padding-top: 10px;
     text-align: center;
     width: 62.5%;
     border-top: 1px solid;
     margin-left: auto;
     margin-right: auto;
-    height:40px;
+    height:50px;
 }
 
 .titlelink {
@@ -88,6 +86,7 @@ a:hover, a:focus {
     display:block;
     float:left;
     color:#c4beb3;
+    padding:10px;
 }
 
 .topdiv {
@@ -111,10 +110,10 @@ a:hover, a:focus {
     color:#483D3F;
     margin:0 !important;
     font-size:50px;
+    font-weight:normal;
     height:150px;
     line-height:160px;
     font-family: 'ShreeDev0714' !important;
-/*     text-transform: uppercase; */
 }
 
 .welcome {
@@ -147,7 +146,7 @@ a:hover, a:focus {
 
 .emailformfield input, button {
     padding:10px;
-    border:1px solid #483D3F;
+    border:1px solid #c4beb3;
     width:200px;
     height:44px;
     font-size:18px;
@@ -171,7 +170,7 @@ a:hover, a:focus {
     margin-right:1.5%;
 }
 
-.linkdiv a {
+.linkdiv > a {
     display: block;
     width: 50%;
     margin-left: auto;
@@ -184,7 +183,6 @@ a:hover, a:focus {
     text-decoration: none;
     color: #483D3F;
     font-size: 24px;
-    font-weight: bold;
     box-shadow: 0px 4px 6px -2px #333;
     border-radius:4px;
 }
@@ -199,14 +197,52 @@ a:hover, a:focus {
     background: url('/assets/resources.jpg'), no-repeat; background-position: 50%; background-size: cover;
 }
 
-.statementwrapper{
-    height:250px;
-}
+.statementwrapper{}
 
 .missionstatement {
     height:100%;
     width:97%;
     margin-left:1.5%;
+}
+
+.carouselwrapper {
+    height: 580px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #c4beb3;
+}
+
+.carouseldiv {
+    height:100%;
+    width:97%;
+    margin-left:1.5%;
+}
+
+.carousel-inner > .item {
+    background-color: #c4beb3 !important;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    max-height: 500px !important;
+    margin: 0 auto;
+}
+
+.carousel-control {
+    opacity:1 !important;
+}
+
+.carousel-control.right, .carousel-control.left {
+    background-image:none !important;
+    background:#483D3F !important;
+}
+
+.carousel-control.right > a:hover {
+    color:#f7f7f7 !important;
+}
+
+.carousel-control.left > a:hover {
+    color:#f7f7f7 !important;
 }
 
 .section {
@@ -218,18 +254,13 @@ a:hover, a:focus {
     padding-top:40px;
 }
 
-
-.bg4 {
-    background-color:#e5e1d7;
-}
-
-.bg5 {
-    background-color:#c4bfb2;
-}
-
-.bg6 {
-    background-color:#392d30;
-/*     background-color:#e5e1d7; */
+.footer {
+    height: 40px;
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+    float: left;
+    font-size:14px;
 }
 
 .fl {
