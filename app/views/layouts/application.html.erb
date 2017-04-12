@@ -3,6 +3,9 @@
 	<%= render partial: "shared/head" %>
     <body>
         <%= render partial: "shared/nav" %>
-        <%= yield %>
+        <div id='mainwrapper' class='container'>
+            <%= yield %>
+            <%= render partial: "shared/footer" %>
+        </div>
     </body>
 </html>

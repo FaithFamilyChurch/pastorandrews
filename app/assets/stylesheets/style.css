@@ -41,10 +41,8 @@ a {
     min-width:600px;
 }
 
-.mainwrapper {
-	width:1050px;
-	margin-left:auto;
-	margin-right:auto;
+#mainwrapper {
+  background: #fff;
 }
 
 .titlewrapper {
