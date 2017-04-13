@@ -17,8 +17,8 @@
             <label for="contact_message">Message</label>
             <textarea class="form-control" id="contact_message" rows="7" style="resize:none;"></textarea>
         </div>
-        <div class="g-recaptcha form-group" data-sitekey="6LeNzhwUAAAAAN4WBRkEDzCVwv_8NgS9aajWEdLg"></div>
-        <div class="emailformfield form-group" style="width:100%;text-align:left;">
+        <%= recaptcha_tags %>
+        <div class="emailformfield form-group" style="width:100%;text-align:left;margin-top:15px;">
             <button>Send Message</button>
         </div>
     </form>

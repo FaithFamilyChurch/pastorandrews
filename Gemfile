@@ -48,7 +48,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'awesome_print', require:"ap"
-gem 'recaptcha', require 'recaptcha/rails'
+gem 'recaptcha', require:"recaptcha/rails"
 
 
 group :development, :test do
