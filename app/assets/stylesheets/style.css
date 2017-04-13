@@ -28,6 +28,14 @@ a {
 	outline:none !important;
 }
 
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "ShreeDev0714", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.1;
+    color: inherit;
+}
+
 .titlelinks > a:hover, .titlelinks > a:focus {
     color: #483D3F !important;
     text-decoration: none !important;
@@ -250,6 +258,19 @@ a {
     border-top:1px solid #c4beb3;
     margin-top: 40px;
     padding-top:40px;
+}
+
+.contactformwrapper {
+    width:100%;
+    margin-top:20px;
+    float:left;
+}
+
+.contactform {
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:40px;
 }
 
 .footer {
