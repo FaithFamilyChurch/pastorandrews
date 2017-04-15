@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-left: 1.5%;
 }
 
-.welcomewrapper h1 {
+.welcomewrapper > .welcome > h1 {
     width:100%;
     text-align:center;
     color:#483D3F;
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     text-align:center;
 }
 
-.emailformfield input, button {
+.emailformfield > input, .emailformfield > button {
     padding:10px;
     border:1px solid #c4beb3;
     width:200px;
@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     text-align:center;
 }
 
-.emailformfield button {
+.emailformfield > button {
     background:#FFF;
     font-size:18px;
 }
@@ -209,16 +209,34 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     height:100%;
     width:97%;
     margin-left:1.5%;
+    padding: 20px;
+    background-color: #f7f7f7;
+    font-size: 20px;
 }
 
-.carouselwrapper {
-    height: 580px;
+.collagewrapper {
+    height: 303px;
     margin-bottom: 40px;
     padding-bottom: 40px;
     border-bottom: 1px solid #c4beb3;
 }
 
-.carouseldiv {
+.collagewrapper > div > ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+.collagewrapper > div > ul > li {
+    float:left;
+    width:20%;
+}
+
+.collagewrapper > div > ul > li > img {
+    width:100%;
+}
+
+.collagediv {
     height:100%;
     width:97%;
     margin-left:1.5%;
