@@ -368,8 +368,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     text-align:center;
 }
 
-
-
 .twitterdiv {
 	float: right;
 	padding: 15px;
@@ -380,26 +378,22 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	padding-right:0px;
 }
 
-.bubble
-{
+.bubble {
     background-color: #EFEFEF;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 10px;
-    width: 90% !important;
     float: left;
-    margin-left: 15px;
+    margin-left: 10px;
     margin-top: 5px;
-
 }
 
 .bubble_date {
     float: left;
     display: block;
     width: 100%;
-    text-align: right;
     font-size: 12px;
-    margin-top: -5px;
+    margin-top: 5px;
     text-transform: uppercase;
 	color:#999;
 }
@@ -451,11 +445,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .tweetheader {
-	width: 90%;
 	padding-left: 5%;
 	padding-right: 5%;
 }
-
 
 .fl {
 	float:left;
