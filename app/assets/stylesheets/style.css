@@ -36,6 +36,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: inherit;
 }
 
+a[rel="tag"] {
+    font-weight:bold;
+    font-style:italic;
+}
+
+.p-author {
+    font-weight:bold;
+    font-style:italic;
+}
+
 .titlelinks > a:hover, .titlelinks > a:focus {
     color: #483D3F !important;
     text-decoration: none !important;
