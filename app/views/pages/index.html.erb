@@ -3,15 +3,20 @@
         <h1>Welcome</h1>
     </div>
 </div>
-<div class="section emailwrapper">
+<%#= render partial: "shared/splitter" %>
+<!--<div class="section emailwrapper">
     <div class="emailform">
         <span class="emailformfield" style="padding:10px;font-size:20px;">Subscribe to Newsletter:</span>
         <span class="emailformfield"><input type="text" placeholder="Name" /></span>
         <span class="emailformfield"><input type="text" placeholder="Email Address" /></span>
         <span class="emailformfield"><button>Subscribe</button></span>
     </div>
-</div>
+</div>-->
+<%#= render partial: "shared/splitter" %>
 <div class="section linkswrapper">
+    <div class="linkdiv sublinkdiv">
+        <a href="javascript:void(0)">Subscribe</a>
+    </div>
     <div class="linkdiv bloglinkdiv">
         <a href="/blog">Blog</a>
     </div>
@@ -22,6 +27,7 @@
         <a href="/resources">Resources</a>
     </div>
 </div>
+<%= render partial: "shared/splitter" %>
 <div class="section statementwrapper">
     <div class="missionstatement">
         <p style="margin:0;">Paul's passionate preaching and biblically based sermons enrich and inspire the body of believers here at
@@ -30,6 +36,7 @@
         walk with Christ.</p>
     </div>
 </div>
+<%= render partial: "shared/splitter" %>
 <div class="section collagewrapper">
     <div class="collagediv">
         <ul>

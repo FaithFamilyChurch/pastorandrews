@@ -12,7 +12,7 @@ html, body {
 /*     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; */
 /*     font-family:'ShreeDev0714'; */
     font-family: Georgia, "Times New Roman", Times, serif;
-    background: #fff;
+/*     background: #fff; */
 }
 
 a {
@@ -37,7 +37,49 @@ a[rel="tag"] {
 
 p {
     font-family: Georgia, "Times New Roman", Times, serif;
+    line-height:30px;
 }
+
+.splitter {
+    height:80px;
+    background-color:#fff;
+    float:left;
+    width:100%;
+}
+
+.splitter_inner {
+    width:98%;
+    margin-left:1%;
+    margin-right:1%;
+    float:left;
+    border-top:1px solid #c4beb3;
+    margin-top:40px;
+    margin-bottom:40px;
+    height:1px;
+}
+
+.section {
+    float:left;
+    width:100%;
+/*     font-family: 'ShreeDev0714' !important; */
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/*     border-top:1px solid #c4beb3; */
+/*     margin-top: 40px; */
+/*     padding-top:40px; */
+    background-color:#fff;
+}
+
+.bg-1 {
+	background: #D5D0D4 url(./rocky-mt-bg.jpg) center 100px no-repeat;
+	background-size:cover;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:1249px;
+	z-index:-1;
+}
+
 
 .p-author {
     font-weight:bold;
@@ -47,7 +89,8 @@ p {
 .titlelinks > a:hover, .titlelinks > a:focus {
     color: #483D3F !important;
     text-decoration: none !important;
-    background-color:#D4D1C7;
+/*     background-color:#D4D1C7; */
+    background-color: #c1b8be;
 }
 
 .site_nav {
@@ -58,29 +101,55 @@ p {
 }
 
 #mainwrapper {
-  background: #fff;
+/*     background: #fff; */
+    z-index:2;
+    position: relative;
 }
 
 .titlewrapper {
     width:100%;
     margin-left:auto;
     margin-right:auto;
-    color:#c4beb3;
-    margin-top:50px;
+/*     color:#c4beb3; */
+    color:#483D3F;
+    margin-top:20px;
+/*     margin-top:30px; */
 }
 
 .title {
-    font-size:50px;
-    text-transform:uppercase;
+    font-size:64px;
+/*     font-size:50px; */
+/*     text-transform:uppercase; */
     text-align:center;
-    height: 175px;
+/*     height: 175px; */
+    height: 150px;
     line-height: 100px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.titleandrews {
+    font-weight:700;
+}
+
 .titlepastor {
-    color:#7d786c;
-    font-weight:bold;
+    font-weight:200;
+/*     color:#7d786c; */
+}
+
+.titledr {
+    color:#b5aab3;
+    width: 420px;
+    display: block;
+    font-size: 20px;
+    font-weight:300;
+    text-transform: uppercase;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:-18px;
 }
 
 .titlelinks {
@@ -88,7 +157,7 @@ p {
     font-size: 21px;
     text-align: center;
     width: 100%;
-    border-top: 1px solid;
+    border-top: 1px solid #c1b8be;
     margin-left: auto;
     margin-right: auto;
     height:50px;
@@ -100,7 +169,8 @@ p {
     text-align:center;
     display:block;
     float:left;
-    color:#c4beb3;
+/*     color:#c4beb3; */
+    color:#6F646C;
     padding:10px;
 }
 
@@ -110,13 +180,25 @@ p {
     width:100% !important;
 }
 
+.contentwrapper {
+    background-color:#fff;
+    padding:20px 10px 40px 10px;
+    float:left;
+    margin-top:50px;
+    width:100%;
+    min-height:1200px;
+}
+
+.resourceswrapper {}
+
 .welcomewrapper {
-    margin-top:75px !important;
+/*     margin-top:75px !important; */
     border-top:0 !important;
     height:500px;
-    background: url(/assets/mountains_small.jpg) no-repeat center center;
-    width: 97% !important;
-    margin-left: 1.5%;
+    background:none;
+/*     background: url(/assets/mountains_small.jpg) no-repeat center center; */
+/*     width: 97% !important; */
+/*     margin-left: 1.5%; */
 }
 
 .welcomewrapper > .welcome > h1 {
@@ -176,19 +258,20 @@ p {
 
 .linkswrapper {
     height: 250px;
+    padding-top:40px
 }
 
 .linkdiv {
-    width:30%;
+    width:20%;
     height:100%;
     float:left;
-    margin-left:1.5%;
-    margin-right:1.5%;
+    margin-left:2.5%;
+    margin-right:2.5%;
 }
 
 .linkdiv > a {
     display: block;
-    width: 50%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -203,6 +286,9 @@ p {
     border-radius:4px;
 }
 
+.sublinkdiv {
+    background: url('/assets/news.jpg'), no-repeat; background-position: 50%; background-size: cover;
+}
 .bloglinkdiv {
     background: url('/assets/blog.jpg'), no-repeat; background-position: 50%; background-size: cover;
 }
@@ -279,22 +365,7 @@ p {
     color:#f7f7f7 !important;
 }
 
-.section {
-    float:left;
-    width:100%;
-/*     font-family: 'ShreeDev0714' !important; */
-    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    border-top:1px solid #c4beb3;
-    margin-top: 40px;
-    padding-top:40px;
-}
-
-.contactformwrapper {
-    width:100%;
-    margin-top:20px;
-    margin-bottom:40px;
-    float:left;
-}
+.contactformwrapper {}
 
 .contactform {
     width: 60%;
@@ -309,17 +380,14 @@ p {
     border-radius: 4px;
 }
 
-.aboutwrapper {
-    float:left;
-    margin-top:20px;
-}
+.aboutwrapper {}
 
 .aboutimage {
-    background: url('/assets/about_pic.jpg'), no-repeat; background-position: 50%; background-size: cover;
+    background: url('/assets/dad.jpg'), no-repeat; background-position: 50%; background-size: cover;
     width:calc(50% - 20px);
     margin:10px;
     float:left;
-    height:455px;
+    height:600px;
 }
 
 .abouttoptext {
@@ -369,15 +437,16 @@ p {
 }
 
 .footer {
-    height: 40px;
+    height: 200px;
     position: relative;
     bottom: 0;
     padding: 10px;
     float: left;
-    font-size:14px;
-    width:100%;
-    text-align:center;
-}
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    background-color: #483D3F;
+    color: #fff;}
 
 .twitterdiv {
 	float: right;

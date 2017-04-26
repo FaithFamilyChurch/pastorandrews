@@ -2,10 +2,11 @@
 <html lang="en">
 	<%= render partial: "shared/head" %>
     <body>
+        <div class="bg-1"></div>
         <div id='mainwrapper' class='container'>
             <%= render partial: "shared/nav" %>
             <%= yield %>
-            <%= render partial: "shared/footer" %>
         </div>
+        <%= render partial: "shared/footer" %>
     </body>
 </html>
