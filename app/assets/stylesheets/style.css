@@ -10,12 +10,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	cursor:default;
-/*     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; */
-/*     font-family:'ShreeDev0714'; */
-/*     font-family: Georgia, "Times New Roman", Times, serif; */
-/*     font-family: 'Radley', serif; */
     font-family: 'Brawler', serif;
-/*     background: #fff; */
 }
 
 a {
@@ -25,8 +20,6 @@ a {
 
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-/*     font-family: "ShreeDev0714", Helvetica, Arial, sans-serif; */
-/*     font-family: Georgia, "Times New Roman", Times, serif; */
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     line-height: 1.1;
@@ -39,8 +32,6 @@ a[rel="tag"] {
 }
 
 p {
-/*     font-family: Georgia, "Times New Roman", Times, serif; */
-/*     font-family: 'Radley', serif; */
     font-family: 'Brawler', serif;
     line-height:30px;
 }
@@ -75,11 +66,7 @@ p {
 .section {
     float:left;
     width:100%;
-/*     font-family: 'ShreeDev0714' !important; */
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-/*     border-top:1px solid #c4beb3; */
-/*     margin-top: 40px; */
-/*     padding-top:40px; */
     background-color:#fff;
 }
 
@@ -103,7 +90,6 @@ p {
 .titlelinks > a:hover, .titlelinks > a:focus {
     color: #483D3F !important;
     text-decoration: none !important;
-/*     background-color:#D4D1C7; */
     background-color: #c1b8be;
 }
 
@@ -111,11 +97,10 @@ p {
     padding:0px;
     width:100%;
     float:left;
-    min-width:600px;
+    min-width:500px;
 }
 
 #mainwrapper {
-/*     background: #fff; */
     z-index:2;
     position: relative;
 }
@@ -124,18 +109,13 @@ p {
     width:100%;
     margin-left:auto;
     margin-right:auto;
-/*     color:#c4beb3; */
     color:#483D3F;
     margin-top:20px;
-/*     margin-top:30px; */
 }
 
 .title {
     font-size:64px;
-/*     font-size:50px; */
-/*     text-transform:uppercase; */
     text-align:center;
-/*     height: 175px; */
     height: 150px;
     line-height: 100px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -147,7 +127,6 @@ p {
 
 .titlepastor {
     font-weight:200;
-/*     color:#7d786c; */
 }
 
 .titledr {
@@ -183,7 +162,6 @@ p {
     text-align:center;
     display:block;
     float:left;
-/*     color:#c4beb3; */
     color:#6F646C;
     padding:10px;
 }
@@ -206,13 +184,9 @@ p {
 .resourceswrapper {}
 
 .welcomewrapper {
-/*     margin-top:75px !important; */
     border-top:0 !important;
     height:500px;
     background:none;
-/*     background: url(/assets/mountains_small.jpg) no-repeat center center; */
-/*     width: 97% !important; */
-/*     margin-left: 1.5%; */
 }
 
 .welcomewrapper > .welcome > h1 {
@@ -221,10 +195,9 @@ p {
     color:#483D3F;
     margin:0 !important;
     font-size:50px;
-    font-weight:normal;
+    font-weight:300;
     height:150px;
-    line-height:160px;
-/*     font-family: 'ShreeDev0714' !important; */
+    line-height:150px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -291,8 +264,8 @@ p {
     text-align: center;
     background: #f7f7f7;
     height: 60px;
+    line-height: 60px;
     margin-top: 80px;
-    padding-top: 15px;
     text-decoration: none;
     color: #483D3F;
     font-size: 24px;
