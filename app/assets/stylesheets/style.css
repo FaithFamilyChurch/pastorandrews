@@ -87,11 +87,10 @@ p {
 
 .p-author {
     font-weight:bold;
-/*     font-style:italic; */
     color: #483D3F;
 }
 
-.titlelinks > a:hover, .titlelinks > a:focus {
+.titlelinks > div > a:hover, .titlelinks > div > a:focus {
     color: #483D3F !important;
     text-decoration: none !important;
     background-color: #c1b8be;
@@ -102,6 +101,30 @@ p {
     width:100%;
     float:left;
     min-width:500px;
+}
+
+.navbar-fixed {
+    top: 0;
+    left:0;
+    z-index: 100;
+    position: fixed;
+    width: 100% !important;
+    background-color: #ddd;
+/*     background-color:#483D3F; */
+}
+
+.navbar-inner-fixed {
+    width:1140px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.navbar-inner-fixed > a {
+/*     color:#fff; */
+}
+
+.navbar-inner-fixed > a:hover, .navbar-inner-fixed > a:focus {
+    border:0;
 }
 
 #mainwrapper {
