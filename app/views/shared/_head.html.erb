@@ -1,5 +1,9 @@
 <head>
-    <title>Pastor Paul Andrews</title>
+    <% title = "Pastor Andrews" %>
+    <% if controller_name != "pages" and controller_name != "" %>
+        <% title = "#{title} - #{controller_name.titleize}" %>
+    <% end %>
+    <title><%= title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
