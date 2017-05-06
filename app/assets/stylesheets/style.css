@@ -74,7 +74,7 @@ p {
 }
 
 .bg-1 {
-	background: #D5D0D4 url(./rocky-mt-bg.jpg) center 100px no-repeat;
+	background: #D5D0D4 url(./rocky-mt-bg.jpg) center 150px no-repeat;
 	background-size:cover;
 	position:absolute;
 	top:0;
@@ -83,7 +83,6 @@ p {
 	height:1249px;
 	z-index:-1;
 }
-
 
 .p-author {
     font-weight:bold;
@@ -157,19 +156,19 @@ p {
 }
 
 .titledr {
-    color:#b5aab3;
-    width: 420px;
+    color: #a499a2;
+    width: 850px;
     display: block;
     font-size: 20px;
-    font-weight:300;
+    font-weight: 400;
     text-transform: uppercase;
     height: 24px;
     line-height: 24px;
     text-align: center;
-    letter-spacing: 9px;
+    letter-spacing: 5px;
     margin-left: auto;
     margin-right: auto;
-    margin-top:-18px;
+    margin-top: -10px;
 }
 
 .titlelinks {
@@ -212,8 +211,12 @@ p {
 
 .welcomewrapper {
     border-top:0 !important;
-    height:500px;
-    background:none;
+    height:450px;
+    background:#222;
+    margin-top:35px;
+    margin-bottom:35px;
+    box-shadow: 0 2px 30px 0 rgba(0,0,0,.2);
+    background-image: url(./paul-banner-2.jpg);
 }
 
 .welcomewrapper > .welcome > h1 {
@@ -229,13 +232,28 @@ p {
 }
 
 .welcome {
-    width: 33%;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:20px;
+    color:#fff;
+    padding: 50px 70px 50px 550px;
+    font-weight:300;
+    line-height:30px;
+/*    width: 33%;
     margin-left: auto;
     margin-right: auto;
     background-color: #f7f7f7;
     margin-top: 135px;
     box-shadow: 0px 4px 6px -2px #333;
-    border-radius: 4px;
+    border-radius: 4px;*/
+}
+
+.welcome > span {
+    font-weight: 700;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-size: 52px;
+    line-height:62px;
 }
 
 .emailwrapper {
