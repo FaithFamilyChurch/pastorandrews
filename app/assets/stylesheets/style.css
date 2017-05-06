@@ -159,6 +159,17 @@ p {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.homelink {
+    text-decoration: none !important;
+    color: #483D3F;
+    display:block;
+}
+
+.homelink:hover, .homelinke:focus {
+    text-decoration: none !important;
+    color: #483D3F;
+}
+
 .titleandrews {
     font-weight:700;
 }
@@ -250,13 +261,6 @@ p {
     padding: 50px 70px 50px 550px;
     font-weight:300;
     line-height:30px;
-/*    width: 33%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #f7f7f7;
-    margin-top: 135px;
-    box-shadow: 0px 4px 6px -2px #333;
-    border-radius: 4px;*/
 }
 
 .welcome > span {
@@ -400,7 +404,8 @@ p {
 .collage-row-1-img-3 {
     background: url(/assets/paul001-small.jpg), no-repeat;
     background-position: 40% 35% !important;
-    background-size: 200% !important;}
+    background-size: 200% !important;
+}
 
 .collage-row-2-img-1 {
     width: 24%;
@@ -408,66 +413,21 @@ p {
     height: 75%;
     background: url(/assets/paul002-small.jpg), no-repeat;
 }
+
 .collage-row-2-img-2 {
     width:14.5%;
     background: url(/assets/paul014-small.jpg), no-repeat;
 }
+
 .collage-row-2-img-3 {
     width:14.5%;
     background: url(/assets/paul006-small.jpg), no-repeat;
 }
+
 .collage-row-2-img-4 {
     width: 24%;
     height: 75%;
     background: url(/assets/paul004-small.jpg), no-repeat;
-}
-
-.collagewrapper > div > ul {
-    list-style: none;
-    padding:0;
-    margin:0;
-}
-
-.collagewrapper > div > ul > li {
-    float:left;
-    width:20%;
-}
-
-.collagewrapper > div > ul > li > img {
-    width:100%;
-}
-
-.collagediv {
-    height:100%;
-    width:97%;
-    margin-left:1.5%;
-}
-
-.carousel-inner > .item {
-    background-color: #c4beb3 !important;
-}
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-    max-height: 500px !important;
-    margin: 0 auto;
-}
-
-.carousel-control {
-    opacity:1 !important;
-}
-
-.carousel-control.right, .carousel-control.left {
-    background-image:none !important;
-    background:#483D3F !important;
-}
-
-.carousel-control.right > a:hover {
-    color:#f7f7f7 !important;
-}
-
-.carousel-control.left > a:hover {
-    color:#f7f7f7 !important;
 }
 
 .contactformwrapper {}
