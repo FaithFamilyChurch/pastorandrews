@@ -31,6 +31,23 @@ p {
     line-height:30px;
 }
 
+#mainwrapper {
+    z-index:2;
+    position: relative;
+}
+
+#fblogo {
+    background: url('/assets/fblogo.png'), no-repeat; background-position: 50%; background-size: cover;
+}
+
+#twitterlogo {
+    background: url('/assets/twitterlogo.png'), no-repeat; background-position: 50%; background-size: cover;
+}
+
+#instalogo {
+    background: url('/assets/instalogo.png'), no-repeat; background-position: 50%; background-size: cover;
+}
+
 .abouttext > p:nth-child(2):first-letter {
     color: #483D3F;
     float: left;
@@ -124,11 +141,6 @@ p {
 
 .navbar-inner-fixed > a:hover, .navbar-inner-fixed > a:focus {
     border:0;
-}
-
-#mainwrapper {
-    z-index:2;
-    position: relative;
 }
 
 .titlewrapper {
@@ -319,16 +331,24 @@ p {
 }
 
 .sublinkdiv {
-    background: url('/assets/news.jpg'), no-repeat; background-position: 50%; background-size: cover;
+    background: url('/assets/paul003-small.jpg'), no-repeat;
+    background-position: 50%;
+    background-size: cover;
 }
 .bloglinkdiv {
-    background: url('/assets/blog.jpg'), no-repeat; background-position: 50%; background-size: cover;
+    background: url(/assets/paul010-small.jpg), no-repeat;
+    background-position: 40% 50%;
+    background-size: 250%;
 }
 .fblinkdiv {
-    background: url('/assets/fb.jpg'), no-repeat; background-position: 50%; background-size: cover;
+    background: url('/assets/paul015-small.jpg'), no-repeat;
+    background-position: 40% 60%;
+    background-size: 250%;
 }
 .rsrclinkdiv {
-    background: url('/assets/resources.jpg'), no-repeat; background-position: 50%; background-size: cover;
+    background: url(/assets/paul013-small.jpg), no-repeat;
+    background-position: 100% 20%;
+    background-size: 200%;
 }
 
 .statementwrapper{}
@@ -343,7 +363,63 @@ p {
 }
 
 .collagewrapper {
-    height: 222px;
+    height: 650px;
+}
+
+.collage-row {
+    width:100%;
+    height:50%;
+}
+
+.collage-img {
+    margin:1.15%;
+    float:left;
+    background-size: cover !important;
+    background-position: 50% !important;
+    box-shadow: 0 0px 30px 0 rgba(0,0,0,.2);
+    border: 1px solid #eee;
+}
+
+.collage-row-1-img {
+    width:31%;
+    height:92%;
+}
+
+.collage-row-2-img {
+    height:92%;
+}
+
+.collage-row-1-img-1 {
+    background: url(/assets/paul009-small.jpg), no-repeat;
+}
+
+.collage-row-1-img-2 {
+    background: url(/assets/paul011-small.jpg), no-repeat;
+}
+
+.collage-row-1-img-3 {
+    background: url(/assets/paul001-small.jpg), no-repeat;
+    background-position: 40% 35% !important;
+    background-size: 200% !important;}
+
+.collage-row-2-img-1 {
+    width: 24%;
+    margin-left: 8%;
+    height: 75%;
+    background: url(/assets/paul002-small.jpg), no-repeat;
+}
+.collage-row-2-img-2 {
+    width:14.5%;
+    background: url(/assets/paul014-small.jpg), no-repeat;
+}
+.collage-row-2-img-3 {
+    width:14.5%;
+    background: url(/assets/paul006-small.jpg), no-repeat;
+}
+.collage-row-2-img-4 {
+    width: 24%;
+    height: 75%;
+    background: url(/assets/paul004-small.jpg), no-repeat;
 }
 
 .collagewrapper > div > ul {
@@ -412,7 +488,7 @@ p {
 .aboutwrapper {}
 
 .aboutimage {
-    background: url(/assets/dad.jpg), no-repeat;
+    background: url(/assets/paul019-small.jpg), no-repeat;
     background-position: 70%;
     background-size: cover;
     width: 300px;
@@ -450,6 +526,19 @@ p {
     display:block;
 }
 
+.footer {
+    height: 295px;
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+    float: left;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    background-color: #483D3F;
+    color: #fff;
+}
+
 .footerdivouter {
     margin-left:auto;
     margin-right:auto;
@@ -467,30 +556,6 @@ p {
     float:left;
     width:100%;
 }
-
-#fblogo {
-    background: url('/assets/fblogo.png'), no-repeat; background-position: 50%; background-size: cover;
-}
-
-#twitterlogo {
-    background: url('/assets/twitterlogo.png'), no-repeat; background-position: 50%; background-size: cover;
-}
-
-#instalogo {
-    background: url('/assets/instalogo.png'), no-repeat; background-position: 50%; background-size: cover;
-}
-
-.footer {
-    height: 200px;
-    position: relative;
-    bottom: 0;
-    padding: 10px;
-    float: left;
-    font-size: 14px;
-    width: 100%;
-    text-align: center;
-    background-color: #483D3F;
-    color: #fff;}
 
 .twitterdiv {
 	float: right;
