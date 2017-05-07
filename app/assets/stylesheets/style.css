@@ -68,7 +68,8 @@ p {
     margin-left:1%;
     margin-right:1%;
     float:left;
-    border-top:1px solid #c4beb3;
+    border-top:1px solid #ddd;
+/*     border-top:1px solid #c4beb3; */
     margin-top:40px;
     margin-bottom:40px;
     height:1px;
@@ -125,7 +126,7 @@ p {
     z-index: 100;
     position: fixed;
     width: 100% !important;
-    background-color: #ddd;
+    background-color: #d5d0d4;
 /*     background-color:#483D3F; */
 }
 
@@ -183,15 +184,15 @@ p {
     width: 850px;
     display: block;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
     text-transform: uppercase;
     height: 24px;
     line-height: 24px;
     text-align: center;
-    letter-spacing: 5px;
+    letter-spacing: 9px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -10px;
+    margin-top: 0px;
 }
 
 .titlelinks {
@@ -230,14 +231,36 @@ p {
     min-height:1200px;
 }
 
-.resourceswrapper {}
+.resources {
+    width:100%;
+    float:left;
+}
+
+.resources-col {
+    float: left;
+    width: 33%;
+    padding: 3%;
+}
+
+.resources-col-header {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 50px;
+    color: #483D3F;
+    line-height: 55px;
+    background: #d5d0d4;
+    margin-bottom:20px;
+}
 
 .welcomewrapper {
     border-top:0 !important;
     height:450px;
     background:#222;
     margin-top:35px;
-    margin-bottom:35px;
     box-shadow: 0 2px 30px 0 rgba(0,0,0,.2);
     background-image: url(./paul-banner-2.jpg);
 }
@@ -256,8 +279,8 @@ p {
 
 .welcome {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size:20px;
-    color:#fff;
+    font-size:19px;
+    color:#f9edf0;
     padding: 50px 70px 50px 550px;
     font-weight:300;
     line-height:30px;
@@ -270,6 +293,7 @@ p {
     letter-spacing: 0px;
     font-size: 52px;
     line-height:62px;
+    color: #a7777f;
 }
 
 .emailwrapper {
@@ -315,11 +339,12 @@ p {
     float:left;
     margin-left:2.5%;
     margin-right:2.5%;
+    box-shadow: 0 2px 30px 0 rgba(0,0,0,.2);
 }
 
 .linkdiv > a {
     display: block;
-    width: 75%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -330,8 +355,6 @@ p {
     text-decoration: none;
     color: #483D3F;
     font-size: 24px;
-    box-shadow: 0px 4px 6px -2px #333;
-    border-radius:4px;
 }
 
 .sublinkdiv {
