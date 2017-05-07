@@ -37,15 +37,21 @@ p {
 }
 
 #fblogo {
-    background: url('/assets/fblogo.png'), no-repeat; background-position: 50%; background-size: cover;
+    background: url('/assets/fblogo.png'), no-repeat;
+    background-position: 50%;
+    background-size: cover;
 }
 
 #twitterlogo {
-    background: url('/assets/twitterlogo.png'), no-repeat; background-position: 50%; background-size: cover;
+    background: url('/assets/twitterlogo.png'), no-repeat;
+    background-position: 50%;
+    background-size: cover;
 }
 
 #instalogo {
-    background: url('/assets/instalogo.png'), no-repeat; background-position: 50%; background-size: cover;
+    background: url('/assets/instalogo.png'), no-repeat;
+    background-position: 50%;
+    background-size: cover;
 }
 
 .abouttext > p:nth-child(2):first-letter {
@@ -69,20 +75,34 @@ p {
     margin-right:1%;
     float:left;
     border-top:1px solid #ddd;
-/*     border-top:1px solid #c4beb3; */
     margin-top:40px;
     margin-bottom:40px;
     height:1px;
 }
 
 .header {
-    width: calc(100% - 20px);
+    width: auto;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    padding: 30px;
+    border: 1px solid rgb(212,207,211);
+    margin: -120px -36px 80px;
+    background-color: rgba(100, 111, 108, 0.45);
+/*  width: calc(100% - 20px);
     text-align: center;
     color: #7d786c;
     font-weight: 300;
     padding: 30px;
     border: 1px solid #efefef;
-    margin: 20px 10px;}
+    margin: 20px 10px;
+    */
+}
+
+.header-blog {
+    width:1080px;
+    margin: -120px -26px 80px;
+}
 
 .section {
     float:left;
@@ -127,7 +147,6 @@ p {
     position: fixed;
     width: 100% !important;
     background-color: #d5d0d4;
-/*     background-color:#483D3F; */
 }
 
 .navbar-inner-fixed {
@@ -136,9 +155,7 @@ p {
     margin-right:auto;
 }
 
-.navbar-inner-fixed > a {
-/*     color:#fff; */
-}
+.navbar-inner-fixed > a {}
 
 .navbar-inner-fixed > a:hover, .navbar-inner-fixed > a:focus {
     border:0;
@@ -345,6 +362,13 @@ p {
 .linkdiv > a {
     display: block;
     width: 100%;
+    height: 100%;
+    line-height: 340px;
+    color: #fff;
+    font-size: 24px;
+    padding-left: 30px;
+/*  display: block;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -352,28 +376,28 @@ p {
     height: 60px;
     line-height: 60px;
     margin-top: 80px;
-    text-decoration: none;
     color: #483D3F;
     font-size: 24px;
+*/
 }
 
 .sublinkdiv {
-    background: url('/assets/paul003-small.jpg'), no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/assets/paul003-small.jpg'), no-repeat;
     background-position: 50%;
     background-size: cover;
 }
 .bloglinkdiv {
-    background: url(/assets/paul010-small.jpg), no-repeat;
-    background-position: 40% 50%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/paul010-small.jpg), no-repeat;
+    background-position: 40% 40%;
     background-size: 250%;
 }
 .fblinkdiv {
-    background: url('/assets/paul015-small.jpg'), no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/assets/paul015-small.jpg'), no-repeat;
     background-position: 40% 60%;
     background-size: 250%;
 }
 .rsrclinkdiv {
-    background: url(/assets/paul013-small.jpg), no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/paul013-small.jpg), no-repeat;
     background-position: 100% 20%;
     background-size: 200%;
 }
@@ -469,6 +493,32 @@ p {
 }
 
 .aboutwrapper {}
+
+.page-top {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    margin: -33px -66px;
+}
+
+.about-top {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url(/assets/paul007-small.jpg);
+}
+
+.contact-top {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url(/assets/paul017-small.jpg);
+    background-position: 50% 20%;
+}
+
+.resources-top {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url(/assets/paul006-small.jpg);
+}
+
+.blog-top {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url(/assets/paul010-small.jpg);
+    margin-left: -56px;
+    width: calc(100% + 112px)
+}
 
 .aboutimage {
     background: url(/assets/paul019-small.jpg), no-repeat;
