@@ -2,7 +2,6 @@
 $( document ).ready(function() {
 
     $(window).scroll(function () {
-        console.log($(window).scrollTop())
         if ($(window).scrollTop() > 170) {
             $('#navbar').addClass('navbar-fixed');
             $('#navbar-inner').addClass('navbar-inner-fixed');
