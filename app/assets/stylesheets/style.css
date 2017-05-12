@@ -54,7 +54,7 @@ p {
     background-size: cover;
 }
 
-.abouttext > p:nth-child(2):first-letter {
+.abouttext > p:nth-child(1):first-letter {
     color: #483D3F;
     float: left;
     font-size: 70px;
