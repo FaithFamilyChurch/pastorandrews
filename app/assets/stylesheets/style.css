@@ -31,6 +31,22 @@ p {
     line-height:30px;
 }
 
+.light-grey-transparent-bg { background-color:rgba(231,224,214,0.65); }
+.light-grey-bg { background-color:#e7e0d6; }
+.light-grey { color:#e7e0d6; }
+.med-grey-transparent-bg { background-color:rgba(181,174,162,0.65); }
+.med-grey-bg { background-color:#b5aea2; }
+.med-grey { color:#b5aea2; }
+.dark-grey-transparent-bg { background-color:rgba(114,115,106,0.65); }
+.dark-grey-bg { background-color:#72736a; }
+.dark-grey { color:#72736a; }
+.dark-blue-transparent-bg { background-color:rgba(65,68,85,0.65); }
+.dark-blue-bg { background-color:#414455; }
+.dark-blue { color:#414455; }
+.dark-red-transparent-bg { background-color:rgba(99,62,70,0.65); }
+.dark-red-bg { background-color:#633e46; }
+.dark-red { color:#633e46; }
+
 #mainwrapper {
     z-index:2;
     position: relative;
@@ -93,8 +109,7 @@ p {
 }
 
 .header-blog {
-    width: calc(100% + 112px) !important;
-    margin: -138px -56px 50px !important;
+    margin: -138px 0px 50px !important;
     background-color: rgba(74, 82, 103, 0.56);
 }
 
@@ -104,7 +119,7 @@ p {
     color: #fff;
     font-weight: 200;
     padding: 30px;
-    margin: -138px -66px 80px;
+    margin: -138px 0px 80px;
     font-size: 70px;
     padding-left: 40px;
 }
@@ -120,14 +135,17 @@ p {
     background-color:#fff;
 }
 
-.bg-1 {
-	background: #D5D0D4 url(./rocky-mt-bg.jpg) center 150px no-repeat;
+.site-bg {
+    background: linear-gradient(to bottom, rgba(255,255,255,0), white), url(./mountain-bg-3.jpg);
+    background-color:#f2f0f1;
+    background-position: center 75px;
+    background-repeat:no-repeat;
 	background-size:cover;
 	position:absolute;
 	top:0;
 	left:0;
 	width:100%;
-	height:1249px;
+	height:900px;
 	z-index:-1;
 }
 
@@ -155,7 +173,7 @@ p {
     z-index: 100;
     position: fixed;
     width: 100% !important;
-    background-color: #d5d0d4;
+    background-color: #f2f0f1;
 }
 
 .navbar-inner-fixed {
@@ -250,7 +268,7 @@ p {
 
 .contentwrapper {
     background-color:#fff;
-    padding:33px 66px;
+    padding:33px 0px;
     float:left;
     margin-top:50px;
     width:100%;
@@ -258,36 +276,61 @@ p {
 }
 
 .resources {
-    width:100%;
-    float:left;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: space-between;
 }
 
 .resources-col {
     float: left;
-    width: 33%;
-    padding: 3%;
+    width: 30%;
 }
 
 .resources-col-header {
     display: block;
     width: 100%;
-    text-align: center;
+    height: 250px;
+    margin-bottom:20px;
+}
+
+.resources-col-header-span {
+    color: #fff;
     font-weight: 400;
     font-size: 20px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    top: 200px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative;
     height: 50px;
-    color: #483D3F;
-    line-height: 55px;
-    background: #d5d0d4;
-    margin-bottom:20px;
+    line-height:50px;
+    background-color: rgba(62, 49, 52, 0.65);
+}
+
+.written-by {
+    background-image: url('/assets/written-by-small.jpg');
+    background-position: 50%;
+    background-size: cover;
+}
+.read-by {
+    background-image: url('/assets/read-by-small.jpg');
+    background-position: 50%;
+    background-size: cover;
+}
+.recommended-by {
+    background-image: url('/assets/recommended-by-small.jpg');
+    background-position: 50%;
+    background-size: cover;
 }
 
 .welcomewrapper {
     border-top:0 !important;
     height:450px;
     background:#222;
-    margin-top:35px;
-    box-shadow: 0 2px 30px 0 rgba(0,0,0,.2);
+    margin-top:50px;
+    box-shadow: 0 -5px 20px 0 rgba(0,0,0,.2);
     background-image: url(./paul-banner-2.jpg);
 }
 
@@ -356,57 +399,64 @@ p {
 
 .linkswrapper {
     height: 250px;
-    padding-top:40px
+    padding-top: 40px;
+    width: calc(100% + 60px);
+    display: flex;
+    justify-content: space-around;
+    margin-left: -30px;
 }
 
 .linkdiv {
     width:20%;
     height:100%;
     float:left;
-    margin-left:2.5%;
-    margin-right:2.5%;
-    box-shadow: 0 2px 30px 0 rgba(0,0,0,.2);
+    border:1px solid #eee;
 }
 
 .linkdiv > a {
     display: block;
     width: 100%;
     height: 100%;
+    line-height: 210px;
+    color: #fff;
+    font-size: 24px;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+    background-repeat: no-repeat;
+    text-align: center;
+    text-transform: lowercase;
+    font-weight: 600;
+
+    /*display: block;
+    width: 100%;
+    height: 100%;
     line-height: 340px;
     color: #fff;
     font-size: 24px;
     padding-left: 30px;
-/*  display: block;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    background: #f7f7f7;
-    height: 60px;
-    line-height: 60px;
-    margin-top: 80px;
-    color: #483D3F;
-    font-size: 24px;
-*/
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+    background-repeat:no-repeat;*/
 }
 
 .sublinkdiv {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/assets/paul003-small.jpg'), no-repeat;
+    background-image: url('/assets/paul003-small.jpg');
     background-position: 50%;
     background-size: cover;
 }
+
 .bloglinkdiv {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/paul010-small.jpg), no-repeat;
+    background-image: url(/assets/paul010-small.jpg);
     background-position: 40% 40%;
     background-size: 250%;
 }
+
 .fblinkdiv {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/assets/paul015-small.jpg'), no-repeat;
+    background-image: url('/assets/paul015-small.jpg');
     background-position: 40% 60%;
     background-size: 250%;
 }
+
 .rsrclinkdiv {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/paul013-small.jpg), no-repeat;
+    background-image: url(/assets/paul013-small.jpg);
     background-position: 100% 20%;
     background-size: 200%;
 }
@@ -415,8 +465,7 @@ p {
 
 .missionstatement {
     height:100%;
-    width:97%;
-    margin-left:1.5%;
+    width:100%;
     padding: 33px 66px;
     background-color: #f7f7f7;
     font-size: 20px;
@@ -424,6 +473,8 @@ p {
 
 .collagewrapper {
     height: 650px;
+    width: calc(100% + 30px);
+    margin-left: -15px;
 }
 
 .collage-row {
@@ -436,7 +487,7 @@ p {
     float:left;
     background-size: cover !important;
     background-position: 50% !important;
-    box-shadow: 0 0px 30px 0 rgba(0,0,0,.2);
+/*     box-shadow: 0 0px 30px 0 rgba(0,0,0,.2); */
     border: 1px solid #eee;
 }
 
@@ -454,7 +505,8 @@ p {
 }
 
 .collage-row-1-img-2 {
-    background: url(/assets/paul011-small.jpg), no-repeat;
+    background: url(/assets/paul019-small.jpg), no-repeat;
+    background-position: 100% 25% !important;
 }
 
 .collage-row-1-img-3 {
@@ -472,18 +524,18 @@ p {
 
 .collage-row-2-img-2 {
     width:14.5%;
-    background: url(/assets/paul014-small.jpg), no-repeat;
+    background: url(/assets/paul006-small.jpg), no-repeat;
 }
 
 .collage-row-2-img-3 {
     width:14.5%;
-    background: url(/assets/paul006-small.jpg), no-repeat;
+    background: url(/assets/paul014-small.jpg), no-repeat;
 }
 
 .collage-row-2-img-4 {
     width: 24%;
     height: 75%;
-    background: url(/assets/paul004-small.jpg), no-repeat;
+    background: url(/assets/paul011-small.jpg), no-repeat;
 }
 
 .contactformwrapper {}
@@ -508,7 +560,7 @@ p {
     background-size: cover;
     background-position: center;
     box-shadow:inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06);
-    margin: -33px -66px;
+    margin: -33px 0px;
 }
 
 .about-top {
@@ -526,8 +578,7 @@ p {
 
 .blog-top {
     background-image: url(/assets/paul010-small.jpg);
-    margin-left: -56px;
-    width: calc(100% + 112px)
+    width: 100%;
 }
 
 .aboutimage {
