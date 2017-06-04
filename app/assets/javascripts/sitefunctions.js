@@ -1,5 +1,16 @@
 
-$( document ).ready(function() {
+// $( document ).ready(function() {
+jQuery( document ).on('turbolinks:load', function() {
+
+    $( ".nav-div" ).click(function() {
+        $(".nav-indicator").each(function() {
+            $(this).css("background-color", "transparent");
+        });
+    });
+
+    var sPath = window.location.pathname.split("/")[1];
+    sPath = FUSION.lib.isBlank(sPath) ? "home" : sPath;
+    FUSION.get.node(sPath + "_indicator").style.backgroundColor = "#483D3F";
 
     $(window).scroll(function () {
         if ($(window).scrollTop() > 170) {
