@@ -154,12 +154,6 @@ p {
     color: #483D3F;
 }
 
-/*.titlelinks > div > a:hover, .titlelinks > div > a:focus {
-    color: #483D3F !important;
-    text-decoration: none !important;
-    background-color: #c1b8be;
-}*/
-
 .nav-div:hover, .nav-div:focus {
     color: #483D3F !important;
     text-decoration: none !important;
@@ -269,7 +263,7 @@ p {
     display:block;
     float:left;
     color:#6F646C;
-    padding:5px 10px 10px 10px;
+    padding:10px 10px 10px 10px;
 }
 
 .nav-div {
@@ -278,7 +272,8 @@ p {
 }
 
 .nav-indicator {
-    height:5px;
+    height:6px;
+    margin-top:-6px;
     width:100%;
     float:left;
 }
