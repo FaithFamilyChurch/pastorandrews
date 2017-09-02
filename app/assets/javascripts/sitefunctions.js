@@ -20,6 +20,7 @@ jQuery( document ).on('turbolinks:load', function() {
             $('.titlelinks').css('border', "none");
             $('.nav-indicator').css('margin-top', '0px');
             $('.titlelink').css('padding', "4px 10px 10px 10px");
+            //$('.feature .nav-indicator').css('margin-bottom', "-6px");
         }
         if ($(window).scrollTop() < 171) {
             $('#navbar').removeClass('navbar-fixed');
@@ -27,7 +28,8 @@ jQuery( document ).on('turbolinks:load', function() {
             $('.title').css('height', "150px");
             $('.titlelinks').css('border-top', "1px solid #c1b8be");
             $('.nav-indicator').css('margin-top', '-6px');
-            $('.titlelink').css('padding', "10px");
+            //$('.feature .nav-indicator').css('margin-bottom', "0px");
+            $('.titlelink').css('padding', "9px 30px 11px");
         }
     });
 

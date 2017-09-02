@@ -1,6 +1,4 @@
 
-<% siteurl = "http://ffcpastor.com/" %>
-
 <!--  nav code -->
 <div id="sitenav" class="site_nav">
     <div class="titlewrapper">
@@ -10,14 +8,6 @@
                 <span class="titledr">encouraging and equipping christian men</span>
             </a>
         </div>
-        <nav id="navbar" class="titlelinks">
-            <div id="navbar-inner">
-                <div class="nav-div"><div class="nav-indicator" id="home_indicator"></div><a href="<%= siteurl %>" class="titlelink">home</a></div>
-                <div class="nav-div"><div class="nav-indicator" id="about_indicator"></div><a href="<%= siteurl %>about" class="titlelink">about</a></div>
-                <div class="nav-div"><div class="nav-indicator" id="contact_indicator"></div><a href="<%= siteurl %>contact" class="titlelink">contact</a></div>
-                <div class="nav-div"><div class="nav-indicator" id="resources_indicator"></div><a href="<%= siteurl %>resources" class="titlelink">resources</a></div>
-                <div class="nav-div"><div class="nav-indicator" id="blog_indicator"></div><a href="<%= siteurl %>blog" class="titlelink">blog</a></div>
-            </div>
-        </nav>
+        <%= render "./shared/nav_links", siteurl: siteurl %>
     </div>
 </div>

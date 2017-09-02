@@ -2,10 +2,10 @@
 <footer class="footer">
     <div class="footerdivouter container">
         <div class="footerdivcontent">
-            Additional footer content goes here
+            <%= render "./shared/nav_links", site_url: siteurl %>
         </div>
-        <div class="footerdivcopyright">
-            &#169; <%= Time.now.year %> pastorandrews.org
-        </div>
+    </div>
+    <div class="footerdivcopyright">
+        &#169; <%= Time.now.year %> pastorandrews.org
     </div>
 </footer>
