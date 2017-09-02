@@ -3,9 +3,23 @@
     <div class="footerdivouter container">
         <div class="footerdivcontent">
             <%= render "./shared/nav_links", site_url: siteurl %>
+            <div class="footer-contact-form">
+               <span>Don't miss a beat</span>
+                <form>
+                    <input placeholder="Your email"><button>sign up</button>
+                </form>
+            </div>
         </div>
     </div>
     <div class="footerdivcopyright">
-        &#169; <%= Time.now.year %> pastorandrews.org
+        <div class="center-page">
+            <div class="pull-left">
+              <span>Paul preaches Sunday mornings at <a href="http://ourfaithfamily.com" target="_blank">Faith Family Church</a></span>
+            </div>
+            <div class="pull-right">
+            &#169; <%= Time.now.year %> pastorandrews.org
+            </div>
+        </div>
+
     </div>
 </footer>
