@@ -722,7 +722,7 @@ p {
     position: absolute;
     right: 30px;
     top: 60px;
-    width: 300px;
+    width: 330px;
     height: auto;
     text-align: left;
 }
@@ -790,6 +790,18 @@ p {
 
 .footerdivcopyright a{
     color: #b5aea2;
+}
+
+.footerlinks {
+    text-transform: lowercase;
+    font-size: 21px;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #c1b8be;
+    margin-left: auto;
+    margin-right: auto;
+    height:50px;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .twitterdiv {

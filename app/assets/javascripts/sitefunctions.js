@@ -13,6 +13,7 @@ jQuery( document ).on('turbolinks:load', function() {
     FUSION.get.node(sPath + "_indicator").style.backgroundColor = "#483D3F";
 
     $(window).scroll(function () {
+//        debugger;
         if ($(window).scrollTop() > 170) {
             $('#navbar').addClass('navbar-fixed');
             $('#navbar-inner').addClass('navbar-inner-fixed');
