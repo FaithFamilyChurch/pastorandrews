@@ -2,6 +2,13 @@
 // $( document ).ready(function() {
 jQuery( document ).on('turbolinks:load', function() {
 
+    $('.welcomewrapper').slick({
+        autoplay: true,
+        fade: true,
+        prevArrow: $(".prevbutton"),
+        nextArrow: $(".nextbutton")
+    });
+
     $( ".nav-div" ).click(function() {
         $(".nav-indicator").each(function() {
             $(this).css("background-color", "transparent");

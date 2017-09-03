@@ -17,4 +17,5 @@
 //= require bootstrap
 //= require fusionlib
 //= require sitefunctions
+//= require slick
 // require_tree .

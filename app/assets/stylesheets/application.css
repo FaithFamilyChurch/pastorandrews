@@ -14,6 +14,7 @@
  *= require fonts
  *= require style
  *= require fusionlib
+ *= require slick
  * require_tree .
  * require_self
  */
