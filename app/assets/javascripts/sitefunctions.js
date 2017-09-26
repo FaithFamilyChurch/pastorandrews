@@ -2,7 +2,7 @@
 // $( document ).ready(function() {
 jQuery( document ).on('turbolinks:load', function() {
 
-    $('.welcomewrapper').slick({
+    $('.welcomeslides').slick({
         autoplay: true,
         fade: true,
         prevArrow: $(".prevbutton"),

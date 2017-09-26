@@ -32,6 +32,13 @@ p {
     line-height:30px;
 }
 
+pTitle {
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    text-decoration: underline;
+    color: #75545B;
+}
+
 .missionstatement p {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -164,7 +171,7 @@ p {
 .navbar-fixed {
     top: 0;
     left:0;
-    z-index: 100;
+    z-index: 1000;
     position: fixed;
     width: 100% !important;
     background-color: #f2f0f1;
@@ -294,6 +301,10 @@ p {
     width: 30%;
 }
 
+.resources-col p {
+    line-height: 22px;
+}
+
 .resources-col-header {
     display: block;
     width: 100%;
@@ -365,33 +376,101 @@ p {
     height:100%;
 }
 
-.prevbutton {}
+.prevbutton {
+    float:left;
+    margin-right: -70px;
+    margin-left: 30px;
+    top: 225px;
+}
 
-.nextbutton {}
+.nextbutton {
+    float:right;
+    margin-right: 30px;
+    margin-left: -70px;
+    top:-225px;
+}
 
 .prevbutton, .nextbutton {
-    width:20px;
-    height:20px;
-    float:left;
-    background-color:#F00;
+    width:40px;
+    height:40px;
+    text-align:center;
     cursor:pointer;
+    position: relative;
+    z-index: 999;
+    border:none;
+    border-radius:20px;
+    background-color: rgba(255,255,255,0.3);
+    outline:none;
+    opacity: .6;
 }
+
+.prevbutton:before, .nextbutton:before { color:white; }
 
 .welcomeslide1 {
-    background-image: url(./paul-banner-2.jpg);
+    background-image: url(./paul-book-2.jpg);
+    color:#676363;
+    padding: 30px 70px 50px 700px;
+    box-shadow: inset -480px 0 200px 0 rgba(208, 205, 199, 0.82);
+    font-weight: 400 !important;
 }
+.welcomeslide1 span { color: #807d77; }
 
 .welcomeslide2 {
-    background-image: url(./about-header-image.jpg);
+    background-image: url(./paul-banner-2.jpg);
+    color:#f9edf0;
+    padding: 50px 70px 50px 550px;
 }
+
+.welcomeslide3 span { color: #a7777f; }
+
+.welcomeslide3 {
+    background-image: url(./reading-list.jpg);
+    color:#676363;
+    padding: 50px 450px 50px 90px;
+}
+
+.welcomeslide3 span { color: #3B587A; }
 
 .welcome {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size:19px;
-    color:#f9edf0;
-    padding: 50px 70px 50px 550px;
     font-weight:300;
     line-height:30px;
+    width: 1140px !important;
+    outline: none;
+}
+
+.welcome button {
+    outline: none;
+    border: none;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.15);
+    padding: 6px 14px 7px;
+    transition: all .25s ease-in-out;
+    background-color: #eceae4;
+    border-radius: 1.5px;
+    margin-right:5px;
+}
+
+.welcome button:hover {
+    background-color: #fff;
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,.06);
+    transition: all .05s ease-in-out;
+}
+
+.welcomeslide2 button {
+    background-color: #945764;
+}
+
+.welcomeslide2 button:hover {
+    background-color: #A7777F;
+}
+
+.welcomeslide3 button {
+    background-color: #E8E9EB;
+}
+
+.welcomeslide3 button:hover {
+    background-color: #FFF;
 }
 
 .welcome > span {
@@ -400,8 +479,7 @@ p {
     text-transform: uppercase;
     letter-spacing: 0px;
     font-size: 52px;
-    line-height:62px;
-    color: #a7777f;
+    line-height:46px;
 	margin-left:-1px;
 }
 
@@ -462,19 +540,9 @@ p {
     box-shadow: inset 0 0 0 2000px rgba(0,0,0,.5);
     background-repeat: no-repeat;
     text-align: center;
-    font-weight: 800;
+    font-weight: 500;
 	transition: all .12s ease-out;
     text-transform: uppercase;
-
-    /*display: block;
-    width: 100%;
-    height: 100%;
-    line-height: 340px;
-    color: #fff;
-    font-size: 24px;
-    padding-left: 30px;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
-    background-repeat:no-repeat;*/
 }
 
 .linkdiv > a:hover {
@@ -700,7 +768,8 @@ p {
 }
 
 .footer {
-    height: 250px;
+/*     height: 250px; */
+    height: 200px;
     position: relative;
     bottom: 0;
     float: left;
@@ -746,7 +815,7 @@ p {
 
 .footerdivcontent .titlelink {
     padding: 6px 22px !important;
-    color: #eadde7;
+    color: #929292;
     margin-top: 15px;
 }
 
@@ -792,7 +861,7 @@ p {
     background-color: #72736a;
     font-size: 18px;
     font-weight: 800;
-    box-shadow: -4px 4px 9px 0 rgba(0,0,0,.25);
+/*     box-shadow: -4px 4px 9px 0 rgba(0,0,0,.25); */
     transition: background-color .1s ease-out;
     border-top: 1px solid #72736a;
     border-bottom: 1px solid #72736a;
@@ -800,6 +869,45 @@ p {
 
 .footer-contact-form button:hover {
     background-color: #8f9086;
+}
+
+.footer-social-media {
+    width: 100%;
+    float: left;
+    text-align: left;
+    padding: 6px 22px;
+    font-size: 21px;
+}
+
+.footer-social-media > span {
+    float: left;
+    margin-right:20px;
+}
+
+.footer-social-media > a:first-child {
+    margin-left:0px;
+}
+
+.footer-sm-link {
+    float:left;
+    display:block;
+    width:50px;
+    height:50px;
+    background-size:cover;
+    margin:10px 20px;
+}
+
+.footer-youtube {
+    background-image:url(/assets/youtube-logo-light.png);
+}
+.footer-facebook {
+    background-image:url(/assets/facebook-logo-light.png);
+}
+.footer-instagram {
+    background-image:url(/assets/instalogo.png);
+}
+.footer-twitter {
+    background-image:url(/assets/twitter-logo-light.png);
 }
 
 .footerdivcopyright {
