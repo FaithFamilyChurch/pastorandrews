@@ -1,8 +1,32 @@
 class Mailchimp < ApplicationRecord
 
+    has_many :mailchimp_lists
+
     require 'net/http'
-	require 'uri'
-	require 'logger'
+    require 'uri'
+    require 'logger'
+
+
+    def self.addNewEmailAddress
+        begin
+			result = {}
+			logger = ActiveSupport::TaggedLogging.new(Logger.new(STDOUT))
+
+			logger.tagged("MAILCHIMP") { logger.debug "Fetching url and api key..." }
+            @mc = Mailchimp.where(service: "mailchimp").first
+            url = @mc.service_url
+            key = @mc.apikey
+
+			if url == "" or key == ""
+				raise "Invalid parameters set for Mailchimp object - please check value of Key and Url"
+			end
+
+			logger.tagged("MAILCHIMP") { logger.debug "Building request to Mailchimp server..." }
+        rescue
+        ensure
+        end
+    end
+
 
     def self.getCurrentList
         begin
@@ -21,7 +45,7 @@ class Mailchimp < ApplicationRecord
 			logger.tagged("MAILCHIMP") { logger.debug "Building request to Mailchimp server..." }
 
             uri = URI.parse(url)
-            request = Net::HTTP::Get.new("#{uri}lists")
+            request = Net::HTTP::Get.new("#{uri}lists/a3914eb759")
             request.basic_auth("ffcpastor", key)
 
             req_options = {
