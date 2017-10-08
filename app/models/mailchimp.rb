@@ -14,6 +14,8 @@ class Mailchimp < ApplicationRecord
 
 			logger.tagged("MAILCHIMP") { logger.debug "Fetching url and api key..." }
             @mc = Mailchimp.where(service: "mailchimp").first
+
+            mcl = @mc.mailchimp_lists.first
             url = @mc.service_url
             key = @mc.apikey
 
@@ -35,6 +37,8 @@ class Mailchimp < ApplicationRecord
 
 			logger.tagged("MAILCHIMP") { logger.debug "Fetching url and api key..." }
             @mc = Mailchimp.where(service: "mailchimp").first
+
+            mcl = @mc.mailchimp_lists.first
             url = @mc.service_url
             key = @mc.apikey
 
@@ -45,7 +49,8 @@ class Mailchimp < ApplicationRecord
 			logger.tagged("MAILCHIMP") { logger.debug "Building request to Mailchimp server..." }
 
             uri = URI.parse(url)
-            request = Net::HTTP::Get.new("#{uri}lists/a3914eb759")
+
+            request = Net::HTTP::Get.new("#{uri}lists/#{mcl.list_id}")
             request.basic_auth("ffcpastor", key)
 
             req_options = {
