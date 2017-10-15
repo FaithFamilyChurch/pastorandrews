@@ -7,61 +7,37 @@ class Mailchimp < ApplicationRecord
     require 'logger'
 
 
-    def self.addNewEmailAddress(name, email)
+    def self.addNewEmailAddress(fname, lname, email)
         begin
 			result = {}
 			logger = ActiveSupport::TaggedLogging.new(Logger.new(STDOUT))
 
-			logger.tagged("MAILCHIMP") { logger.debug "Fetching url and api key..." }
-            @mc = Mailchimp.where(service: "mailchimp").first
-
-            mcl = @mc.mailchimp_lists.first
-            url = @mc.service_url
-            key = @mc.apikey
-
-			if url == "" or key == ""
-				raise "Invalid parameters set for Mailchimp object - please check value of Key and Url"
-			end
-
             logger.tagged("MAILCHIMP") { logger.debug "Checking for variables..." }
 
-            if name.strip == ""
-                raise "The subscriber name is required to be added to the email list"
+            if fname.strip == ""
+                raise "The subscriber first name is required to be added to the email list"
+            end
+
+            if lname.strip == ""
+                raise "The subscriber last name is required to be added to the email list"
             end
 
             if email.strip == ""
-                raise "The subscriber email is required to be added to the email list"
+                raise "The subscriber email address is required to be added to the email list"
             end
 
 			logger.tagged("MAILCHIMP") { logger.debug "Building request to Mailchimp server..." }
 
-            uri = URI.parse(url)
-
-            request = Net::HTTP::Post.new("#{uri}lists/#{mcl.list_id}/members")
-            request.basic_auth("ffcpastor", key)
-
-            req_options = {
-                use_ssl: uri.scheme == "https",
+            reqdata = {
+                "email_address" => email,
+                "status"        => "subscribed",
+                "merge_fields"  => {
+                    "FNAME" => fname,
+                    "LNAME" => lname
+                }
             }
 
-			logger.tagged("MAILCHIMP") { logger.debug "Sending request to Mailchimp server..." }
-            response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
-                http.request(request)
-            end
-
-			if response.code.to_i == 200
-				logger.tagged("MAILCHIMP") { logger.debug "Request received successfully - building hash response..." }
-				respjson = JSON.parse(response.body)
-				headinfo = JSON.parse(response.to_json)
-
-				result['status']    = "success"
-				result['code']      = response.code.to_i
-                result['content']   = respjson
-                result['headers']   = headinfo
-			else
-				logger.tagged("MAILCHIMP") { logger.debug "Request failed with status code #{response.code}, Error: #{response.body}" }
-				raise "Error making request: STATUS CODE #{response.code}, ERROR: #{response.body}"
-			end
+            result = Mailchimp.sendMailchimpListRequest("POST", "members", reqdata)
 
         rescue => error
 			result['status']  = "failure"
@@ -76,8 +52,8 @@ class Mailchimp < ApplicationRecord
     def self.getCurrentListSubscribers
         begin
 			result = {}
-			logger = ActiveSupport::TaggedLogging.new(Logger.new(STDOUT))
 
+			logger = ActiveSupport::TaggedLogging.new(Logger.new(STDOUT))
 			logger.tagged("MAILCHIMP") { logger.debug "Sending GET request to Mailchimp server..." }
 
             result = Mailchimp.sendMailchimpListRequest("GET", "members")
@@ -91,51 +67,16 @@ class Mailchimp < ApplicationRecord
         end
     end
 
+
     def self.getCurrentList
         begin
-			result = {}
+            result = {}
+
 			logger = ActiveSupport::TaggedLogging.new(Logger.new(STDOUT))
+			logger.tagged("MAILCHIMP") { logger.debug "Sending GET request to Mailchimp server..." }
 
-			logger.tagged("MAILCHIMP") { logger.debug "Fetching url and api key..." }
-            @mc = Mailchimp.where(service: "mailchimp").first
+            result = Mailchimp.sendMailchimpListRequest("GET", "")
 
-            mcl = @mc.mailchimp_lists.first
-            url = @mc.service_url
-            key = @mc.apikey
-
-			if url == "" or key == ""
-				raise "Invalid parameters set for Mailchimp object - please check value of Key and Url"
-			end
-
-			logger.tagged("MAILCHIMP") { logger.debug "Building request to Mailchimp server..." }
-
-            uri = URI.parse(url)
-
-            request = Net::HTTP::Get.new("#{uri}lists/#{mcl.list_id}")
-            request.basic_auth("ffcpastor", key)
-
-            req_options = {
-                use_ssl: uri.scheme == "https",
-            }
-
-			logger.tagged("MAILCHIMP") { logger.debug "Sending request to Mailchimp server..." }
-            response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
-                http.request(request)
-            end
-
-			if response.code.to_i == 200
-				logger.tagged("MAILCHIMP") { logger.debug "Request received successfully - building hash response..." }
-				respjson = JSON.parse(response.body)
-				headinfo = JSON.parse(response.to_json)
-
-				result['status']    = "success"
-				result['code']      = response.code.to_i
-                result['content']   = respjson
-                result['headers']   = headinfo
-			else
-				logger.tagged("MAILCHIMP") { logger.debug "Request failed with status code #{response.code}, Error: #{response.body}" }
-				raise "Error making request: STATUS CODE #{response.code}, ERROR: #{response.body}"
-			end
 		rescue => error
 			result['status']  = "failure"
 			result['message'] = "Error: #{error.message}"
@@ -224,7 +165,7 @@ class Mailchimp < ApplicationRecord
 			result['message'] = "Error: #{error.message}"
 			result['content'] = error.backtrace
         ensure
-            return response
+            return result
         end
     end
 
