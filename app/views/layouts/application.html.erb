@@ -11,5 +11,44 @@
             <%= yield %>
         </div>
         <%= render "shared/footer", siteurl: siteurl %>
+
+        <!-- Modal -->
+        <div class="modal fade" id="subscription_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!--<div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>-->
+                    <div class="modal-body">
+                    <form id="subscription_form">
+                        <button id="close_button" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="header_div form-group">
+                            Subscribe to Paul's newsletter and receive a free copy of his e-book,<br>
+                            <span>10 Chapters of the Bible Every Christian Should Know and Understand</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subscribe_email">Email address</label>
+                            <input type="email" class="form-control" name="subscribe_email" id="subscribe_email" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="subscribe_fname">First Name</label>
+                            <input type="text" class="form-control" name="subscribe_fname" id="subscribe_fname" placeholder="First Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="subscribe_lname">Last Name</label>
+                            <input type="text" class="form-control" name="subscribe_lname" id="subscribe_lname" placeholder="Last Name">
+                        </div>
+                    </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="subscribe_button" class="btn btn-default">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>

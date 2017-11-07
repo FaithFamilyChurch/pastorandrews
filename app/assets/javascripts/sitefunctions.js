@@ -15,6 +15,10 @@ jQuery( document ).on('turbolinks:load', function() {
         });
     });
 
+    $("#subscribe_button").click(function() {
+        sendSubscriptionRequest();
+    });
+
     var sPath = window.location.pathname.split("/")[1];
     sPath = FUSION.lib.isBlank(sPath) ? "home" : sPath;
     FUSION.get.node(sPath + "_indicator").style.backgroundColor = "#483D3F";
@@ -42,3 +46,51 @@ jQuery( document ).on('turbolinks:load', function() {
     });
 
 });
+
+
+function normalizeArray(aFormData)
+{
+    var oNormalizedData = {};
+    for(var i = 0; i < aFormData.length; i++)
+    {
+        oNormalizedData[aFormData[i]['name']] = aFormData[i]['value'];
+    }
+    return oNormalizedData;
+}
+
+
+function sendSubscriptionRequest()
+{
+    var oFormData = normalizeArray($("#subscription_form").serializeArray());
+
+    if(oFormData['subscribe_email'] === null || typeof oFormData['subscribe_email'] === "undefined" || /^\s*$/.test(oFormData['subscribe_email']))
+    {
+        alert("Please make sure you've entered your email address!");
+        return false;
+    }
+
+    if(oFormData['subscribe_fname'] === null || typeof oFormData['subscribe_fname'] === "undefined")
+    {
+        oFormData['subscribe_fname'] = "";
+    }
+
+    if(oFormData['subscribe_lname'] === null || typeof oFormData['subscribe_lname'] === "undefined")
+    {
+        oFormData['subscribe_lname'] = "";
+    }
+
+	var info = {
+		"type": "POST",
+		"path": "pages/1/requestNewSubscription",
+		"data": oFormData,
+		"func": subscriptionRequestResponse
+	};
+	FUSION.lib.ajaxCall(info);
+
+}
+
+
+function subscriptionRequestResponse(h)
+{
+
+}

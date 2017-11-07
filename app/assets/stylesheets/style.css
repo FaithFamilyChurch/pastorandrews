@@ -39,6 +39,28 @@ pTitle {
     color: #75545B;
 }
 
+.modal {
+/*     font-family: Arial !important; */
+}
+
+.modal .header_div {
+    font-size: 17px;
+    font-weight:bold;
+}
+
+.modal .header_div span {
+    color: #946545
+}
+
+.modal #close_button {
+    display: inline-block;
+    float: none;
+    position: relative;
+    right: -97%;
+    width: 20px;
+    margin-bottom: 10px;
+}
+
 .missionstatement p {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -1053,3 +1075,9 @@ pTitle {
 	float:left;
 }
 
+.mc_form_wrapper {
+    width:300px;
+    height:500px;
+    margin-left:auto;
+    margin-right:auto;
+}

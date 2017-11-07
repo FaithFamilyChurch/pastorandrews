@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
 	resources :pages do
 		member do
+            post "requestNewSubscription"
 #			get "getForecastSearch"
 #			get "getForecastLatLong"
 		end

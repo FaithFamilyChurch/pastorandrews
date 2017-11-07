@@ -6,6 +6,9 @@ class Mailchimp < ApplicationRecord
     require 'uri'
     require 'logger'
 
+    # to get hash of email address:
+    # require 'digest'
+    # email_hash = Digest::MD5.hexdigest 'jamusic53@yahoo.com'
 
     def self.addNewEmailAddress(fname, lname, email)
         begin
