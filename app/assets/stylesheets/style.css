@@ -35,16 +35,46 @@ p {
 pTitle {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 800;
-    text-decoration: underline;
+/*     text-decoration: underline; */
     color: #75545B;
+    margin-left:-5px;
 }
+
+.morecontent span {
+    display: none;
+}
+
+.morelink {
+    display: block;
+    float: left;
+    line-height: 30px;
+    width:50%;
+}
+
+.moreicon {
+    margin-right: 5px;
+    float: left;
+    line-height: 30px;
+    font-size:13px;
+    color:#bd5068;
+}
+
+.moretext {
+    float: left;
+    display: block !important;
+    color: #483D3F;
+    font-weight: bold;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 32px;}
 
 .modal {
 /*     font-family: Arial !important; */
 }
 
 .modal .header_div {
-    font-size: 17px;
+    font-size: 16px;
     font-weight:bold;
 }
 
@@ -58,7 +88,19 @@ pTitle {
     position: relative;
     right: -97%;
     width: 20px;
-    margin-bottom: 10px;
+    font-size: 35px;
+    line-height: 25px;
+    height: 25px;
+}
+
+.modal #close_button span {
+    display:block;
+    height: 25px;
+}
+
+#subscription_form {
+    font-family:"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top:-10px;
 }
 
 .missionstatement p {
@@ -320,7 +362,17 @@ pTitle {
 
 .resources-col {
     float: left;
-    width: 30%;
+    width: 35%;
+}
+
+.resources-col-2x {
+    float: left;
+    width: 60%;
+}
+
+.resources-col-2x p {
+    margin-bottom:50px;
+    min-height:170px;
 }
 
 .resources-col p {
@@ -347,6 +399,19 @@ pTitle {
     height: 50px;
     line-height:50px;
     background-color: rgba(62, 49, 52, 0.65);
+}
+
+.amzn_link {
+    float:left;
+    margin-right:20px;
+    margin-bottom:10px;
+    margin-top:5px;
+    border:1px solid #d9d9d9;
+}
+
+pTitle a {
+    text-decoration: none;
+    color:#75545B;
 }
 
 .written-by {

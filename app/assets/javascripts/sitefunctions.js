@@ -2,6 +2,42 @@
 // $( document ).ready(function() {
 jQuery( document ).on('turbolinks:load', function() {
 
+
+    // Configure/customize these variables.
+    var showChar = 200;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "<i class='glyphicon glyphicon-plus moreicon'></i><span class='moretext'>show more</span>";
+    var lesstext = "<i class='glyphicon glyphicon-minus moreicon'></i><span class='moretext'>show less</span>";
+
+
+    $('.more').each(function() {
+        var content = $(this).html();
+
+        if(content.length > showChar) {
+
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+
+            var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span>';
+            html += '<span class="morecontent"><span>' + h + '</span>&nbsp';
+            html += '<a href="" class="morelink">' + moretext + '</a></span>';
+            $(this).html(html);
+        }
+    });
+
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+
     $('.welcomeslides').slick({
         autoplay: true,
         fade: true,
@@ -23,8 +59,8 @@ jQuery( document ).on('turbolinks:load', function() {
     sPath = FUSION.lib.isBlank(sPath) ? "home" : sPath;
     FUSION.get.node(sPath + "_indicator").style.backgroundColor = "#483D3F";
 
-    $(window).scroll(function () {
-//        debugger;
+    $(window).scroll(function ()
+    {
         if ($(window).scrollTop() > 170) {
             $('#navbar').addClass('navbar-fixed');
             $('#navbar-inner').addClass('navbar-inner-fixed');
@@ -92,5 +128,25 @@ function sendSubscriptionRequest()
 
 function subscriptionRequestResponse(h)
 {
+    var oResponse = h || {};
+
+    try
+    {
+        if(oResponse['status'] === "success" && oResponse['content']['status'] === "subscribed")
+        {
+            console.log("Subscription request submitted successfully");
+            $('#subscription_modal').modal('hide');
+        }
+        else
+        {
+            alert("There was an error submitting your subscription request\nPlease refresh the page and try again");
+            console.log("Error submitting subscription request: " + oResponse['status'] + " - " + oResponse['message']);
+        }
+    }
+    catch(err)
+    {
+        alert("There was an error submitting your subscription request\nPlease refresh the page and try again");
+		console.error("Error processing subscription request: " + err.message);
+	}
 
 }
