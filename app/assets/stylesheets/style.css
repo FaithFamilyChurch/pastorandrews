@@ -936,6 +936,7 @@ pTitle a {
     border-left: 1px solid transparent;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
+    margin-right:-5px;
 }
 
 .footer-contact-form input:focus {

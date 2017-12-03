@@ -81,6 +81,25 @@ jQuery( document ).on('turbolinks:load', function() {
         }
     });
 
+    $('#subscription_modal').on('show.bs.modal', function (e) {
+        try
+        {
+            var oFooterEmail = FUSION.get.node("footer_email_address");
+            if(e.relatedTarget.id === "footer_subscribe_button" && typeof oFooterEmail.value !== "undefined" && !FUSION.lib.isBlank(oFooterEmail.value))
+            {
+                FUSION.get.node("subscribe_email").value = oFooterEmail.value;
+                FUSION.get.node("subscribe_fname").focus();
+            }
+            else
+            {
+                FUSION.get.node("subscribe_email").focus();
+            }
+        }
+        catch(err)
+        {
+		    console.error("Error getting email address: " + err.message);
+	    }
+    });
 });
 
 
@@ -102,6 +121,12 @@ function sendSubscriptionRequest()
     if(oFormData['subscribe_email'] === null || typeof oFormData['subscribe_email'] === "undefined" || /^\s*$/.test(oFormData['subscribe_email']))
     {
         alert("Please make sure you've entered your email address!");
+        return false;
+    }
+
+    if( !FUSION.lib.isValidEmail( oFormData['subscribe_email'] ) )
+    {
+        alert("Please enter a valid email address!");
         return false;
     }
 

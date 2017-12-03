@@ -901,6 +901,21 @@ FUSION.lib = {
 		}
 	},
 
+    isValidEmail: function(sEmailAddress)
+    {
+        var bResult = false;
+        try
+        {
+            bResult = /^((([!#$%&'*+\-/=?^_`{|}~\w])|([!#$%&'*+\-/=?^_`{|}~\w][!#$%&'*+\-/=?^_`{|}~\.\w]{0,}[!#$%&'*+\-/=?^_`{|}~\w]))[@]\w+([-.]\w+)*\.\w+([-.]\w+)*)$/.test(sEmailAddress);
+        }
+        catch(err)
+        {
+            console.log("Email regex test failed: " + err.message)
+        }
+        return bResult;
+
+    },
+
 	//prevents a users from typing anything but numer characters in a text field
 	noAlpha: function(th)
 	{
