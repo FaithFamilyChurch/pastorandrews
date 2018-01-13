@@ -781,7 +781,7 @@ pTitle a {
     height: auto;
 }
 
-.contactform .form-group label { 
+.contactform .form-group label {
     font-weight: normal;
 }
 
@@ -823,10 +823,39 @@ pTitle a {
     height: 580px;
 }
 
+.abouttext li {
+    line-height:30px;
+}
+
+.abouttext img {
+    width: 30%;
+    float: left;
+/*     margin-right: 20px; */
+    margin-top: 5px;
+}
+
+.abouttext button {
+    outline: none;
+    border: none;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.15);
+    padding: 6px 14px 7px;
+    transition: all .25s ease-in-out;
+    background-color: #eceae4;
+    border-radius: 1.5px;
+    margin-right:5px;
+}
+
+.abouttext button:hover {
+    background-color: #eee;
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,.06);
+    transition: all .05s ease-in-out;
+}
+
 .abouttext {
     float:left;
     width:100%;
-    padding:60px 90px;
+    padding:20px 90px;
+/*     padding:60px 90px; */
 }
 
 .aboutlinks {

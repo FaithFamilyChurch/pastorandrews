@@ -7,11 +7,17 @@ Rails.application.routes.draw do
 	get 'about', to: 'about#index', as: :about
 	get 'about/index'
 
-	get 'contact', to: 'contact#index', as: :contact
-	get 'contact/index'
+	get 'messages', to: 'messages#index', as: :messages
+	get 'messages/index'
 
-	get 'resources', to: 'resources#index', as: :resources
-	get 'resources/index'
+	get 'picks', to: 'picks#index', as: :picks
+	get 'picks/index'
+
+#	get 'resources', to: 'resources#index', as: :resources
+#	get 'resources/index'
+
+#   get 'contact', to: 'contact#index', as: :resources
+#	get 'contact/index'
 
 #	get 'pages/oops'
 #	get 'oops' => 'pages#oops'
@@ -19,8 +25,6 @@ Rails.application.routes.draw do
 	resources :pages do
 		member do
             post "requestNewSubscription"
-#			get "getForecastSearch"
-#			get "getForecastLatLong"
 		end
 	end
 
