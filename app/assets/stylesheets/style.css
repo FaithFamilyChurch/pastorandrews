@@ -617,19 +617,108 @@ pTitle a {
     border:1px solid #eee;
 }
 
-.linkdiv > a {
-	display: block;
+.recent_post_div {
+    position:relative;
+    float:left;
+    background-color: #FFF;
+    padding: 10px;
+    width: 60%;
+    color: #333;
+    top:10px;
+    box-shadow: 6px 0px 10px 1px rgba(0,0,0,.5);
+    text-transform:uppercase;
+}
+
+.recent_icon {
+    margin-right:5px;
+    color:#945764;
+}
+
+.article_link {
+    color: #333;
+    font-weight: bold;
+    display: block;
     width: 100%;
-    height: 100%;
-    line-height: 210px;
-    color: #fff;
-    font-size: 31px;
-    box-shadow: inset 0 0 0 2000px rgba(0,0,0,.5);
-    background-repeat: no-repeat;
-    text-align: center;
-    font-weight: 500;
-	transition: all .12s ease-out;
-    text-transform: uppercase;
+    float: left;
+    padding: 10px;
+    line-height: 25px;
+    text-align:left;
+
+/*
+    color: #333;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    float: left;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    line-height: 1.5em;
+    max-height: 3.6em;
+    margin-right: -1em;
+    padding-right: 20px;
+    height: 60px;
+    text-align: justify;
+
+  overflow: hidden;
+  position: relative;
+  max-height: 3.6em;
+  text-align: justify;
+    */
+}
+
+/* create the ... */
+/* .block-with-text:before { */
+/*.article_link:before {
+  content: '...';
+  position: absolute;
+  right: 8px;
+  bottom: 0;
+}
+
+.article_link:after {
+  content: '';
+  position: absolute;
+  right: 8px;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.article_image_div {
+    height:150px;
+}
+
+.article_meta_div {
+    height:250px;
+}
+
+.article_date_div {
+    float: left;
+    width: 100%;
+    padding: 2px 10px;
+    font-size: 13px;
+    color: #999;
+}
+
+.article_summary_div {
+    float:left;
+    padding:10px;
+    font-size:14px;
 }
 
 .linkdiv > a:hover {
@@ -661,6 +750,7 @@ pTitle a {
     background-position: 100% 20%;
     background-size: 200%;
 }
+
 
 .statementwrapper{}
 

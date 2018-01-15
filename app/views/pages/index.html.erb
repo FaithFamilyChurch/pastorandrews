@@ -28,7 +28,30 @@
     <button class="nextbutton glyphicon glyphicon-chevron-right"></button>
 </div>
 <div class="section linkswrapper">
-    <div class="linkdiv sublinkdiv">
+    <% nCount = 0 %>
+    <% @aArticles.each do |oArticle| %>
+    <div class="linkdiv">
+        <a href="<%= @sDomain %><%= oArticle['link'] %>">
+            <% if nCount == 0 and @bShowRecent == true %>
+                <div class="recent_post_div"><i class="glyphicon glyphicon-star recent_icon"></i>Latest Post</div>
+            <% end %>
+            <div class="article_image_div" style="background:url('<%= oArticle['image'] %>');background-size:cover;background-position:center;"></div>
+        </a>
+        <div class="article_meta_div">
+            <a target="_blank" class="article_link" href="<%= @sDomain %><%= oArticle['link'] %>">
+                <%= oArticle['title'] %>
+            </a>
+            <div class="article_date_div">
+                <%= oArticle['date'] %>
+            </div>
+            <div class="article_summary_div">
+                <%= oArticle['text'].html_safe %>
+            </div>
+        </div>
+    </div>
+    <% nCount = nCount + 1 %>
+    <% end %>
+    <!--<div class="linkdiv sublinkdiv">
         <a href="javascript:void(0)">Subscribe</a>
     </div>
     <div class="linkdiv bloglinkdiv">
@@ -39,10 +62,10 @@
     </div>
     <div class="linkdiv rsrclinkdiv">
         <a href="/resources">Resources</a>
-    </div>
+    </div>-->
 </div>
 <div class="section">
-    asdf
+    SUBSCRIPTION SECTION
 </div>
 <!--<div class="section statementwrapper">
     <div class="missionstatement">
