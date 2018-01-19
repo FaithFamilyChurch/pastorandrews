@@ -18,7 +18,11 @@ a {
 	text-decoration:none !important;
 	outline:none !important;
 }
+*:focus {outline:0;}
 
+/*button:focus {outline:0;}
+input:focus {outline:0;}
+a:focus {outline:0;}*/
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -763,6 +767,57 @@ pTitle a {
     color: #fff;
 	box-shadow: inset 0 0 200px 0 rgba(0,0,0,.2);
 	text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.subformwrapper {}
+
+.subformwrapper > div {
+    float:left;
+    width:100%;
+}
+
+.subform {
+	height: 100%;
+    width: 100%;
+    padding: 30px 60px;
+    font-size: 20px;
+    background-color: #ddd;
+    color: #666;
+    text-align:center;
+}
+
+.subform_header {
+    text-transform: capitalize;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.subform_subheader {
+    padding:10px 0px;
+    font-size:16px;
+}
+
+.subform_emailform {
+    padding:10px 0px;
+}
+
+#subform_email {
+    height: 60px;
+    padding: 20px;
+}
+
+#subform_email_btn {
+    width: 180px;
+    font-size: 24px;
+    height: 60px;
+    font-weight: 200;
+    background-color: #fefefe;
+    border: 1px solid #666;
+}
+
+.subform_privacy {
+    font-size:13px;
+    padding:10px 0px;
 }
 
 /* This is the large dropcaps that has all the cascading shadows */

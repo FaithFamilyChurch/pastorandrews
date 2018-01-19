@@ -606,7 +606,7 @@ FUSION.lib = {
 											    "attributes":{"id":mdid, "class":"fl_alert_message_div"},
 											    "style":{"fontSize":		fnt+"px",
 														 "fontWeight":		bld,
-														 "backgroundColor":bcl,
+														 "backgroundColor": bcl,
 														 "color":			col,
 														 "textAlign":		txt}});
 
