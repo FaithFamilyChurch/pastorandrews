@@ -1,0 +1,38 @@
+<div class="contentwrapper messageswrapper">
+    <div class="page-top messages-top"></div>
+    <h3 class="header header-messages"><span>messages</span></h3>
+    <div class="messages_container">
+
+        <% @aVideos.each do |oVideo| %>
+            <% sUrlPath = "https://www.youtube.com/watch?v=#{oVideo['resourceId']['videoId']}" %>
+            <div class="video_wrapper">
+                <div class="video_icon" style="background:url(<%= oVideo['thumbnails']['medium']['url'] %>)">
+                    <a target="_blank" href="<%= sUrlPath %>" class="video_icon_link">
+                        <span class="youtube_icon"></span>
+                    </a>
+                </div>
+                <div class="video_title"><a target="_blank" href="<%= sUrlPath %>"><%= oVideo['title'] %></a></div>
+                <div class="video_description"><%= oVideo['description'] %></div>
+            </div>
+        <% end %>
+
+        <div class="video_broadcast" id="boxcast-widget-tft3ciozk9qcoqot0cfb"></div>
+
+        <script type="text/javascript" charset="utf-8">
+            (function(d, s, c, o)
+             {
+                var js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+                var h = (('https:' == document.location.protocol) ? 'https:' : 'http:');
+                js.src = h + '//js.boxcast.com/v3.min.js';
+                js.onload = function()
+                {
+                    boxcast.noConflict()('#boxcast-widget-'+c).loadChannel(c, o);
+                };
+                js.charset = 'utf-8';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'tft3ciozk9qcoqot0cfb', {"showTitle":1,"showDescription":1,"showHighlights":1,"showRelated":true,"defaultVideo":"next","market":"church"}));
+        </script>
+
+
+    </div>
+</div>
