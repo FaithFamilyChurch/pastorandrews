@@ -10,7 +10,7 @@ jQuery( document ).on('turbolinks:load', function() {
     var lesstext = "<i class='glyphicon glyphicon-minus moreicon'></i><span class='moretext'>show less</span>";
 
 
-    $('.more').each(function() {
+    /*$('.more').each(function() {
         var content = $(this).html();
 
         if(content.length > showChar) {
@@ -36,10 +36,12 @@ jQuery( document ).on('turbolinks:load', function() {
         $(this).parent().prev().toggle();
         $(this).prev().toggle();
         return false;
-    });
+    });*/
 
     $('.welcomeslides').slick({
         autoplay: true,
+        autoplaySpeed: 7000,
+        infinite:true,
         fade: true,
         prevArrow: $(".prevbutton"),
         nextArrow: $(".nextbutton")
@@ -85,9 +87,12 @@ jQuery( document ).on('turbolinks:load', function() {
         try
         {
             var oFooterEmail = FUSION.get.node("footer_email_address");
-            if(e.relatedTarget.id === "footer_subscribe_button" && typeof oFooterEmail.value !== "undefined" && !FUSION.lib.isBlank(oFooterEmail.value))
+            var oBtn    = e.relatedTarget;
+            var aInputs = oBtn.parentNode.getElementsByTagName("input");
+
+            if(aInputs.length > 0 && typeof aInputs[0].value !== "undefined" && !FUSION.lib.isBlank(aInputs[0].value))
             {
-                FUSION.get.node("subscribe_email").value = oFooterEmail.value;
+                FUSION.get.node("subscribe_email").value = aInputs[0].value;
                 FUSION.get.node("subscribe_fname").focus();
             }
             else

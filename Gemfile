@@ -35,6 +35,7 @@ gem 'jquery-turbolinks'
 
 gem 'devise'
 gem 'rolify'
+#gem 'google-api-client' #, '~> 0.19.3'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'

@@ -3,34 +3,49 @@
     <div class="welcomeslides">
         <div class="welcome welcomeslide1">
             <span>now available</span>
-            Doctor Andrew's first e-book <br><strong>10 Chapters of the Bible Every Christian Should Know and Understand</strong><br> is now available, free to all subscribers. Sign up for the newsletter and get your free copy today!
-            <br><br><button type="button" data-toggle="modal" data-target="#subscription_modal" id="banner_subscribe_button">
+            Every word of the Bible is precious, but just as mountain ranges have famous peaks, certain chapters stand out in their significance in explaining God’s redemptive plan for you.
+            <br><br>
+            <button style="width:200px;" type="button" data-toggle="modal" data-target="#subscription_modal" id="banner_subscribe_button">
                 Get your free copy
             </button>
         </div>
-        <div class="welcome welcomeslide2">
-             <span>meet paul</span>
-            Pastor Paul Andrews ministers every Sunday at Faith Family Church in Finksburg, Md. Paul is a teacher with a heart for instructing men on Christian manhood and learning about God's plan for their lives. <br><br>Paul is available for speaking engagements for this focus and other more general topics on the Christian Life.
-<!--            <br><br><button>Upcoming events</button>//-->
-<!--            <button>Contact Paul</button>//-->
+        <% oFirstArticle = @aArticles[0] %>
+        <div class="welcome welcomeslide2" style="">
+            <span><%= oFirstArticle['title'] %></span>
+            <%= oFirstArticle['text'].html_safe %>
+            <br><br>
+            <a href="<%= @sDomain %><%= oFirstArticle['link'] %>" target="_blank" style="color:#676363">Read more</a>
         </div>
         <div class="welcome welcomeslide3">
-             <span>Paul's library</span>
-            <strong>Divorce and Remarriage by Guy Duty</strong> <br><br>If you want to know what Jesus and the apostles taught about divorce and remarraige then, by all means, get this book.
-            <br><br><button>
-                Learn more
-            </button>
-            <button>
-                Amazon Link
-            </button>
+             <span>Paul's Picks</span>
+            <strong>Divorce and Remarriage by Guy Duty</strong> <br><br>
+            A compassionate and Biblical analysis of scripture on the oft-confused subject of divorce and remarriage.
+            If you want to know what Jesus and the apostles taught about divorce and remarraige, then by all means, get this book.
+            <br><br>
+                <a href="<%= picks_path %>">Learn more</a>
+                <a target="_blank" href="https://www.amazon.com/gp/product/0764227262/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0764227262&linkCode=as2&tag=pastorandrews-20&linkId=aac9234bec535b4ea1c1eebcdfb9f3b3">
+                    Buy on Amazon
+                </a>
         </div>
     </div>
     <button class="nextbutton glyphicon glyphicon-chevron-right"></button>
 </div>
 <div class="section linkswrapper">
+    <% sWidth = "auto" %>
+    <% if @aArticles.size == 5 %>
+        <% sWidth = "18%" %>
+    <% elsif @aArticles.size == 4 %>
+        <% sWidth = "22%" %>
+    <% elsif @aArticles.size == 3 %>
+        <% sWidth = "30%" %>
+    <% elsif @aArticles.size == 2 %>
+        <% sWidth = "45%" %>
+    <% elsif @aArticles.size == 1 %>
+        <% sWidth = "auto" %>
+    <% end %>
     <% nCount = 0 %>
     <% @aArticles.each do |oArticle| %>
-    <div class="linkdiv">
+    <div class="linkdiv" style="width:<%= sWidth %>">
         <a href="<%= @sDomain %><%= oArticle['link'] %>">
             <% if nCount == 0 and @bShowRecent == true %>
                 <div class="recent_post_div"><i class="glyphicon glyphicon-star recent_icon"></i>Latest Post</div>
@@ -49,7 +64,6 @@
             </div>
         </div>
     </div>
-    <% nCount = nCount + 1 %>
     <% end %>
 </div>
 <div class="section subformwrapper">
@@ -61,21 +75,13 @@
         </div>
         <div class="subform_emailform">
             <input type="email" id="subform_email" value="" placeholder="Email Address" />
-            <button id="subform_email_btn">sign up</button>
+            <button id="subform_email_btn" data-toggle="modal" data-target="#subscription_modal">sign up</button>
         </div>
         <div class="subform_privacy">
             Don’t worry, you can always unsubscribe later
         </div>
     </div>
 </div>
-<!--<div class="section statementwrapper">
-    <div class="missionstatement">
-        <p style="margin:0;">Paul's passionate preaching and biblically based sermons enrich and inspire the body of believers here at
-        Faith Family Church. He and his wife Judy have been serving the Lord in minisitry for more than 30 years, and founded Faith Family Church
-        with the goal of creating a Christ centered atmosphere of worship and biblical learning. Come, listen, and be inspired to grow in your
-        walk with Christ.</p>
-    </div>
-</div>-->
 <div class="section collagewrapper">
     <div class="collage-row">
         <div class="collage-img collage-row-1-img collage-row-1-img-1"></div>
