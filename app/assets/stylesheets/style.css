@@ -375,7 +375,8 @@ pTitle {
 .resources-col {
     float: left;
     width:100%;
-    margin-bottom:60px;
+/*     margin-bottom:60px; */
+    padding:30px;
 }
 
 .resources-col-2x {
@@ -393,8 +394,26 @@ pTitle {
     float:left;
 }
 
-.resources-bottom p {
+.resources-bottom div {
     margin-bottom:60px;
+}
+
+.media-right {
+    line-height:30px;
+}
+
+.book_title {
+    font-weight: bold;
+    float: left;
+    display: block;
+    width: 100%;
+    font-family:"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height:30px;
+}
+
+.book_title a {
+    text-decoration: none;
+    color:#75545B;
 }
 
 .resources-col-header {
@@ -425,11 +444,6 @@ pTitle {
     margin-bottom:10px;
     margin-top:5px;
     border:1px solid #d9d9d9;
-}
-
-pTitle a {
-    text-decoration: none;
-    color:#75545B;
 }
 
 .written-by {
@@ -481,6 +495,14 @@ pTitle a {
     height:100%;
 }
 
+#welcome_blog_link {
+    background-color: #9a596c !important;
+}
+
+#welcome_blog_link:hover {
+    background-color:#ca889b !important;
+}
+
 .prevbutton {
     float:left;
     margin-right: -70px;
@@ -526,15 +548,13 @@ pTitle a {
     padding: 50px 70px 50px 550px;
 }
 
-.welcomeslide3 span { color: #a7777f; }
+.welcomeslide3 span { color: #444; }
 
 .welcomeslide3 {
     background-image: url(./reading-list.jpg);
     color:#676363;
     padding: 50px 450px 50px 90px;
 }
-
-.welcomeslide3 span { color: #3B587A; }
 
 .welcome {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -823,6 +843,13 @@ pTitle a {
 #subform_email {
     height: 60px;
     padding: 20px;
+    border: 0;
+    outline: 0;
+    margin-right:-7px;
+}
+
+#subform_email_btn:hover {
+    background-color:#8f9086;
 }
 
 #subform_email_btn {
@@ -830,8 +857,12 @@ pTitle a {
     font-size: 24px;
     height: 60px;
     font-weight: 200;
-    background-color: #fefefe;
-    border: 1px solid #666;
+    background-color: #72736a;
+    border: 0;
+    outline: 0;
+    transform: translateY(1px);
+    color:#fff;
+    font-weight:bold;
 }
 
 .subform_privacy {
@@ -950,8 +981,6 @@ pTitle a {
     float: left;
     width: 256px;
     height: 151px;
-    background-position: center !important;
-    background-size: cover !important;
 }
 
 .youtube_icon {
@@ -960,15 +989,15 @@ pTitle a {
     display: block;
     height: 25px;
     position: relative;
-    top: 105px;
-    right: -200px;
+    top: 45px;
+    right: -180px;
     background-position: center;
     background-size: cover;
     margin: 10px;
 }
 
 .video_title {
-    padding: 10px 20px;
+    padding: 10px 30px;
     float: left;
     font-size: 22px;
     font-weight: 400;
@@ -979,10 +1008,14 @@ pTitle a {
     color: #75545B;
 }
 
+.video_title a:hover {
+    cursor:pointer;
+}
+
 .video_description {
     float: left;
-    padding: 10px 20px;
-    width: calc(100% - 300px);
+    padding: 10px 30px;
+    width: calc(100% - 260px);
 }
 
 .video_wrapper {
@@ -997,6 +1030,45 @@ pTitle a {
     display:block;
     width:100%;
     height:100%;
+    background-position: center !important;
+    background-size: cover !important;
+    border:0;
+    outline:0;
+}
+
+.watch_now_text {
+    margin-bottom:20px;
+}
+
+.watch_now_btn {
+    outline: none;
+    border: none;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.15);
+    padding: 6px 14px 7px;
+    transition: all .25s ease-in-out;
+    background-color: #eceae4;
+    border-radius: 1.5px;
+    margin-right: 5px;
+    font-weight:bold;
+    font-family:"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.watch_now_btn:hover {
+    background-color: #eee;
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,.06);
+    transition: all .05s ease-in-out;
+}
+
+#broadcast_container {
+    margin-bottom:60px;
+}
+
+.sermon_header_wrapper {
+    margin-bottom:20px;
+}
+.sermon_header {
+/*     border-bottom: 1px solid #666; */
+    color: #666;
 }
 
 .messages_container {

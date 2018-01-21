@@ -3,25 +3,39 @@
     <h3 class="header header-messages"><span>messages</span></h3>
     <div class="messages_container">
 
+        <div class="sermon_header_wrapper" id="broadcast_container">
+            <h3 class="sermon_header">Watch Live</h3>
+            <div class="watch_now_text">
+                Pastor Andrews speaks every Sunday morning at 8:30am and 11:15am.  Click the "Watch Now" button to see the current broadcast, or select from a few of his
+                recent sermons below.
+            </div>
+            <button class="watch_now_btn">Watch Now</button>
+        </div>
+        <div class="sermon_header_wrapper" id="recent_sermon_header">
+            <h3 class="sermon_header">Recent Sermons</h3>
+        </div>
         <% @aVideos.each do |oVideo| %>
             <% sUrlPath = "https://www.youtube.com/watch?v=#{oVideo['resourceId']['videoId']}" %>
             <div class="video_wrapper">
-                <div class="video_icon" style="background:url(<%= oVideo['thumbnails']['medium']['url'] %>)">
-                    <a target="_blank" href="<%= sUrlPath %>" class="video_icon_link">
+                <div class="video_icon">
+                    <button class="video_icon_link js-modal-btn" style="background:url(<%= oVideo['thumbnails']['medium']['url'] %>)" data-video-id="<%= oVideo['resourceId']['videoId'] %>">
                         <span class="youtube_icon"></span>
-                    </a>
+                    </button>
                 </div>
-                <div class="video_title"><a target="_blank" href="<%= sUrlPath %>"><%= oVideo['title'] %></a></div>
+                <div class="video_title">
+                    <a class="js-modal-btn" data-video-id="<%= oVideo['resourceId']['videoId'] %>"><%= oVideo['title'] %></a>
+                </div>
                 <div class="video_description"><%= oVideo['description'] %></div>
             </div>
         <% end %>
 
-        <div class="video_broadcast" id="boxcast-widget-tft3ciozk9qcoqot0cfb"></div>
+<!--        <div class="video_broadcast" id="boxcast-widget-tft3ciozk9qcoqot0cfb"></div>//-->
 
         <script type="text/javascript" charset="utf-8">
             (function(d, s, c, o)
              {
-                var js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+                $(".js-modal-btn").modalVideo();
+                /*var js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
                 var h = (('https:' == document.location.protocol) ? 'https:' : 'http:');
                 js.src = h + '//js.boxcast.com/v3.min.js';
                 js.onload = function()
@@ -30,6 +44,7 @@
                 };
                 js.charset = 'utf-8';
                 fjs.parentNode.insertBefore(js, fjs);
+                */
             }(document, 'script', 'tft3ciozk9qcoqot0cfb', {"showTitle":1,"showDescription":1,"showHighlights":1,"showRelated":true,"defaultVideo":"next","market":"church"}));
         </script>
 

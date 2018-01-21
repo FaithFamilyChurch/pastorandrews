@@ -18,4 +18,6 @@
 //= require fusionlib
 //= require sitefunctions
 //= require slick
+//= require jquery-modal-video.min
+//= require modal-video.min
 // require_tree .

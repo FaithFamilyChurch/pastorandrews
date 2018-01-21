@@ -51,6 +51,8 @@ class MessagesController < ApplicationController
             if @aVideos.size > 4
                 @aVideos = @aVideos[0..3]
             end
+
+            #@aVideos.sort_by!{ |oHash| oHash['publishedAt']  }
         else
             logger.tagged("MAILCHIMP") { logger.debug "Request failed with status code #{oResponse.code}, Error: #{oResponse.body}" }
         end
