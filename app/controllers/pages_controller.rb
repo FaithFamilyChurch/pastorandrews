@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-
+    layout "splashpage"
     require 'nokogiri'
 
 	def index

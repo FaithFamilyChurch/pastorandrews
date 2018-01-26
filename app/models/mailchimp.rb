@@ -108,7 +108,7 @@ class Mailchimp < ApplicationRecord
 			logger.tagged("MAILCHIMP") { logger.debug "Fetching url and api key..." }
             @mc = Mailchimp.where(service: "mailchimp").first
 
-            mcl = @mc.mailchimp_lists.first
+            mcl = @mc.mailchimp_lists.where(name: "Website Subscribers").first
             url = @mc.service_url
             key = @mc.apikey
 

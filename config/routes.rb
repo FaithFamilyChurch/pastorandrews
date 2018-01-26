@@ -1,23 +1,20 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-	get 'pages/index'
-	root 'pages#index'
+    get 'pages/splash'
+    root 'pages#splash'
 
-	get 'about', to: 'about#index', as: :about
-	get 'about/index'
+#	get 'pages/index'
+#	root 'pages#index'
 
-	get 'messages', to: 'messages#index', as: :messages
-	get 'messages/index'
+#	get 'about', to: 'about#index', as: :about
+#	get 'about/index'
 
-	get 'picks', to: 'picks#index', as: :picks
-	get 'picks/index'
+#	get 'messages', to: 'messages#index', as: :messages
+#	get 'messages/index'
 
-#	get 'resources', to: 'resources#index', as: :resources
-#	get 'resources/index'
-
-#   get 'contact', to: 'contact#index', as: :resources
-#	get 'contact/index'
+#	get 'picks', to: 'picks#index', as: :picks
+#	get 'picks/index'
 
 #	get 'pages/oops'
 #	get 'oops' => 'pages#oops'

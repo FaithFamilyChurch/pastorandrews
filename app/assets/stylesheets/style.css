@@ -44,6 +44,18 @@ pTitle {
     margin-left:-5px;
 }
 
+.coming_soon {
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    color: #333;
+    width:100%;
+    float:left;
+    text-align:center;
+    margin-top:200px;
+    position:absolute;
+    font-size:40px;
+}
+
 .morecontent span {
     display: none;
 }
@@ -396,6 +408,10 @@ pTitle {
 
 .resources-bottom div {
     margin-bottom:60px;
+}
+
+.media-left {
+/*     vertical-align:middle; */
 }
 
 .media-right {
