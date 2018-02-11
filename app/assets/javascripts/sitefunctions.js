@@ -1,42 +1,9 @@
 
 // $( document ).ready(function() {
-jQuery( document ).on('turbolinks:load', function() {
-
-
-    // Configure/customize these variables.
-    var showChar = 200;  // How many characters are shown by default
-    var ellipsestext = "...";
-    var moretext = "<i class='glyphicon glyphicon-plus moreicon'></i><span class='moretext'>show more</span>";
-    var lesstext = "<i class='glyphicon glyphicon-minus moreicon'></i><span class='moretext'>show less</span>";
-
-
-    /*$('.more').each(function() {
-        var content = $(this).html();
-
-        if(content.length > showChar) {
-
-            var c = content.substr(0, showChar);
-            var h = content.substr(showChar, content.length - showChar);
-
-            var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span>';
-            html += '<span class="morecontent"><span>' + h + '</span>&nbsp';
-            html += '<a href="" class="morelink">' + moretext + '</a></span>';
-            $(this).html(html);
-        }
-    });
-
-    $(".morelink").click(function(){
-        if($(this).hasClass("less")) {
-            $(this).removeClass("less");
-            $(this).html(moretext);
-        } else {
-            $(this).addClass("less");
-            $(this).html(lesstext);
-        }
-        $(this).parent().prev().toggle();
-        $(this).prev().toggle();
-        return false;
-    });*/
+jQuery( document ).on('turbolinks:load', function()
+{
+    //var oDeadline = new Date(Date.parse("Feb 18, 2018 00:00:00"));
+    //initializeClock('clockdiv', oDeadline);
 
     $('.welcomeslides').slick({
         autoplay: true,
@@ -107,6 +74,46 @@ jQuery( document ).on('turbolinks:load', function() {
     });
 });
 
+/*
+function getTimeRemaining(sEndTime)
+{
+    var t = Date.parse(sEndTime) - Date.parse(new Date());
+    var oTime = { 'total':t, 'days':0, 'hours':0, 'minutes':0, 'seconds':0 };
+    oTime['seconds'] = Math.floor((t / 1000) % 60);
+    oTime['minutes'] = Math.floor((t / 1000 / 60) % 60);
+    oTime['hours']   = Math.floor((t / (1000 * 60 * 60)) % 24);
+    oTime['days']    = Math.floor(t / (1000 * 60 * 60 * 24));
+    return oTime;
+}
+
+
+function initializeClock(sId, sEndTime)
+{
+    var clock       = document.getElementById(sId);
+    var daysSpan    = clock.querySelector('.days');
+    var hoursSpan   = clock.querySelector('.hours');
+    var minutesSpan = clock.querySelector('.minutes');
+    var secondsSpan = clock.querySelector('.seconds');
+
+    function updateClock()
+    {
+        var t = getTimeRemaining(sEndTime);
+
+        daysSpan.innerHTML    = t.days;
+        hoursSpan.innerHTML   = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+        if ( t.total <= 0 )
+        {
+            clearInterval(oTimeInterval);
+        }
+    }
+
+    updateClock();
+    var oTimeInterval = setInterval(updateClock, 1000);
+}
+*/
 
 function normalizeArray(aFormData)
 {

@@ -51,9 +51,45 @@ pTitle {
     width:100%;
     float:left;
     text-align:center;
-    margin-top:200px;
+    padding-top:200px;
     position:absolute;
-    font-size:40px;
+    font-size:50px;
+}
+
+
+#clockdiv{
+	font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 50px;
+    float: left;
+    width: 100%;
+    margin-top: 300px;
+    margin-left:15px;
+}
+
+#clockdiv > div{
+    padding: 10px;
+    margin:10px;
+    background: #c6beb1;
+    display: inline-block;
+    color: #333;
+    font-weight: bold;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+    background: #111111;
+    display: inline-block;
+    width: 100px;
+    color: #fff;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 22px;
 }
 
 .morecontent span {
@@ -550,11 +586,13 @@ pTitle {
 .prevbutton:before, .nextbutton:before { color:white; }
 
 .welcomeslide1 {
-    background-image: url(./paul-book-2.jpg);
+    background-image: url(./banner1_landscapebook_small.jpg);
     color:#676363;
     padding: 30px 70px 50px 700px;
     box-shadow: inset -480px 0 200px 0 rgba(208, 205, 199, 0.82);
     font-weight: 400 !important;
+    background-position: center;
+    background-size: cover;
 }
 .welcomeslide1 span { color: #807d77; }
 
@@ -1117,6 +1155,21 @@ pTitle {
 
 .abouttext li {
     line-height:30px;
+}
+
+.sm_wrapper {
+    width: 100%;
+    float: left;
+    padding: 20px;
+    height: 100px;
+    line-height: 75px;
+    background-color:#ccc;
+}
+.sm_divs {
+    float: left;
+    width: 33%;
+    text-align: center;
+    height: auto;
 }
 
 .abouttext img {

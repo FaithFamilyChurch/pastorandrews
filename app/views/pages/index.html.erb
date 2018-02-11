@@ -51,7 +51,11 @@
                 <div class="recent_post_div"><i class="glyphicon glyphicon-star recent_icon"></i>Latest Post</div>
             <% end %>
             <% nCount = nCount + 1 %>
-            <div class="article_image_div" style="background:url('<%= oArticle['image'] %>');background-size:cover;background-position:center;"></div>
+            <% if oArticle['imageid'] == 0 %>
+                <div class="article_image_div" style="background:url('<%= oArticle['imagesrc'] %>');background-size:cover;background-position:center;"></div>
+            <% else %>
+                <div class="article_image_div" style="background:url('/assets/blogimages/<%= oArticle['imageid'] %>/<%= oArticle['imagename'] %>');background-size:cover;background-position:center;"></div>
+            <% end %>
         </a>
         <div class="article_meta_div">
             <a target="_blank" class="article_link" href="<%= @sDomain %><%= oArticle['link'] %>">
