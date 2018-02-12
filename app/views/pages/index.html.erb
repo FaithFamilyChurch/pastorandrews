@@ -2,12 +2,20 @@
     <button class="prevbutton glyphicon glyphicon-chevron-left"></button>
     <div class="welcomeslides">
         <div class="welcome welcomeslide1">
+            <span class="ws1topspan">paul's new ebook</span>
+            <span class="ws1midspan1">available</span>
+            <span class="ws1midspan2">for <span class="ws1midspan3">free</span></span>
+            <button style="width:200px;float: right;margin-right: 20px;" type="button" data-toggle="modal" data-target="#subscription_modal" id="banner_subscribe_button">
+                CLICK HERE
+            </button>
+            <!--
             <span>now available</span>
             Every word of the Bible is precious, but just as mountain ranges have famous peaks, certain chapters stand out in their significance in explaining God’s redemptive plan for you.
             <br><br>
             <button style="width:200px;" type="button" data-toggle="modal" data-target="#subscription_modal" id="banner_subscribe_button">
                 Get your free copy
             </button>
+            -->
         </div>
         <% oFirstArticle = @aArticles[0] %>
         <div class="welcome welcomeslide2" style="">
@@ -51,10 +59,10 @@
                 <div class="recent_post_div"><i class="glyphicon glyphicon-star recent_icon"></i>Latest Post</div>
             <% end %>
             <% nCount = nCount + 1 %>
-            <% if oArticle['imageid'] == 0 %>
-                <div class="article_image_div" style="background:url('<%= oArticle['imagesrc'] %>');background-size:cover;background-position:center;"></div>
+            <% if oArticle['image_id'] == 0 %>
+                <div class="article_image_div" style="background:url('<%= oArticle['image_src'] %>');background-size:cover;background-position:center;"></div>
             <% else %>
-                <div class="article_image_div" style="background:url('/assets/blogimages/<%= oArticle['imageid'] %>/<%= oArticle['imagename'] %>');background-size:cover;background-position:center;"></div>
+                <div class="article_image_div" style="background:url('/assets/blogimages/<%= oArticle['image_id'] %>/<%= oArticle['image_name'] %>');background-size:cover;background-position:center;"></div>
             <% end %>
         </a>
         <div class="article_meta_div">

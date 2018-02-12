@@ -6,7 +6,7 @@ jQuery( document ).on('turbolinks:load', function()
     //initializeClock('clockdiv', oDeadline);
 
     $('.welcomeslides').slick({
-        autoplay: true,
+       autoplay: true,
         autoplaySpeed: 7000,
         infinite:true,
         fade: true,

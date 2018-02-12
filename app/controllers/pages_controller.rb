@@ -34,9 +34,6 @@ class PagesController < ApplicationController
                 sTxt = oPTag.first.inner_html
             end
 
-#            aRgx = sTxt.split(/\./)
-#            aRgx = aTxt[0].split(/\.|\?|\!/)
-#            aRgx = sTxt.split(/\.|\?|\!/)
             aRgx = sTxt.split(/(?<=[?.!])/)
             sTxt = "#{aRgx[0]}#{aRgx[1][0]}"
 
@@ -51,7 +48,7 @@ class PagesController < ApplicationController
                 end
 
                 sImgName = eImg['data-imagename']
-                logger.debug "IMAGENAME IS: #{eImg['data-imagename']}"
+#                logger.debug "IMAGENAME IS: #{eImg['data-imagename']}"
             end
 
             oDate = Time.parse(aBlog[18].to_s)
@@ -62,10 +59,10 @@ class PagesController < ApplicationController
             @aTmp['link']  = sLink
             @aTmp['title'] = aBlog[2]
             @aTmp['date']  = aBlog[18].strftime("%^b %-d, %Y")
-            @aTmp['imagesrc'] = sImgSrc
-            @aTmp['imagename'] = sImgName
-            @aTmp['imageid'] = nImgId
             @aTmp['text']  = sTxt
+            @aTmp['image_src']  = sImgSrc
+            @aTmp['image_name'] = sImgName
+            @aTmp['image_id']   = nImgId
 
             @aArticles.push @aTmp
         end

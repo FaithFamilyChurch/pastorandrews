@@ -586,15 +586,51 @@ pTitle {
 .prevbutton:before, .nextbutton:before { color:white; }
 
 .welcomeslide1 {
-    background-image: url(./banner1_landscapebook_small.jpg);
+/*     background-image: url(./banner1_landscapebook_small.jpg); */
+    background-image: url(./banner1_landscapebook_notext.png);
     color:#676363;
     padding: 30px 70px 50px 700px;
-    box-shadow: inset -480px 0 200px 0 rgba(208, 205, 199, 0.82);
+/*     box-shadow: inset -480px 0 200px 0 rgba(208, 205, 199, 0.82); */
     font-weight: 400 !important;
     background-position: center;
     background-size: cover;
 }
-.welcomeslide1 span { color: #807d77; }
+.welcomeslide1 span { color: #B5AFA2; }
+
+.ws1topspan {
+    color: #fff !important;
+    font-size: 30px !important;
+    font-weight: 500 !important;
+    margin-top:20px;
+    margin-bottom:80px;
+    padding-right:20px;
+    text-align:right;
+}
+
+.ws1midspan1 {
+    text-transform:lowercase !important;
+    font-size:70px !important;
+    text-align:right;
+    padding-right:20px;
+}
+
+.ws1midspan2 {
+    text-transform: lowercase !important;
+    font-weight: 400 !important;
+    text-align: right;
+    font-size: 30px !important;
+    padding-right: 20px;
+    margin-bottom:100px;
+}
+
+.ws1midspan3 {
+    text-transform: uppercase !important;
+    font-size:90px !important;
+    font-weight:400 !important;
+    color:#fff !important;
+    float:right;
+    margin-top:20px;
+}
 
 .welcomeslide2 {
     background-image: url(./paul-banner-2.jpg);
