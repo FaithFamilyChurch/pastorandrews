@@ -74,46 +74,6 @@ jQuery( document ).on('turbolinks:load', function()
     });
 });
 
-/*
-function getTimeRemaining(sEndTime)
-{
-    var t = Date.parse(sEndTime) - Date.parse(new Date());
-    var oTime = { 'total':t, 'days':0, 'hours':0, 'minutes':0, 'seconds':0 };
-    oTime['seconds'] = Math.floor((t / 1000) % 60);
-    oTime['minutes'] = Math.floor((t / 1000 / 60) % 60);
-    oTime['hours']   = Math.floor((t / (1000 * 60 * 60)) % 24);
-    oTime['days']    = Math.floor(t / (1000 * 60 * 60 * 24));
-    return oTime;
-}
-
-
-function initializeClock(sId, sEndTime)
-{
-    var clock       = document.getElementById(sId);
-    var daysSpan    = clock.querySelector('.days');
-    var hoursSpan   = clock.querySelector('.hours');
-    var minutesSpan = clock.querySelector('.minutes');
-    var secondsSpan = clock.querySelector('.seconds');
-
-    function updateClock()
-    {
-        var t = getTimeRemaining(sEndTime);
-
-        daysSpan.innerHTML    = t.days;
-        hoursSpan.innerHTML   = ('0' + t.hours).slice(-2);
-        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-        if ( t.total <= 0 )
-        {
-            clearInterval(oTimeInterval);
-        }
-    }
-
-    updateClock();
-    var oTimeInterval = setInterval(updateClock, 1000);
-}
-*/
 
 function normalizeArray(aFormData)
 {
@@ -171,8 +131,11 @@ function subscriptionRequestResponse(h)
     {
         if(oResponse['status'] === "success" && oResponse['content']['status'] === "subscribed")
         {
+            //$('#subscription_modal').modal('hide');
             console.log("Subscription request submitted successfully");
-            $('#subscription_modal').modal('hide');
+            $(".email_input_text").each(function() {
+                $( this ).val( "" );
+            });
         }
         else
         {
