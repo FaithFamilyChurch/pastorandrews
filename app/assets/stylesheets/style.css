@@ -1196,22 +1196,18 @@ pTitle {
 .sm_wrapper {
     width: 100%;
     float: left;
-    padding: 20px;
-    height: 100px;
-    line-height: 75px;
-    background-color:#ccc;
+    margin-left:-10px;
 }
 .sm_divs {
     float: left;
-    width: 33%;
     text-align: center;
     height: auto;
+    padding:10px;
 }
 
 .abouttext img {
     width: 30%;
     float: left;
-/*     margin-right: 20px; */
     margin-top: 5px;
 }
 
