@@ -6,7 +6,7 @@ class PagesController < ApplicationController
         @aBlogList = execute_statement("select * from pastorblog_dev.contents order by published_at desc limit 4;")
         @aArticles = []
 
-        @sDomain = "http://ffcpastor.com/"
+        @sDomain = "http://#{Rails.configuration.site_url}/"
 
         @bShowRecent = false
 
