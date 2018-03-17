@@ -633,7 +633,7 @@ pTitle {
 }
 
 .welcomeslide2 {
-    background-image: url(./paul-banner-2.jpg);
+    background-image: url(/assets/paul-banner-2.jpg);
     color:#f9edf0;
     padding: 50px 70px 50px 550px;
 }
@@ -641,7 +641,7 @@ pTitle {
 .welcomeslide3 span { color: #444; }
 
 .welcomeslide3 {
-    background-image: url(./reading-list.jpg);
+    background-image: url(/assets/reading-list.jpg);
     color:#676363;
     padding: 50px 450px 50px 90px;
 }

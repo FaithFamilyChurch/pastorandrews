@@ -1,0 +1,257 @@
+@media only screen and (max-width: 1200px)
+{
+
+body {
+    border-top: 10px solid #957C80;
+    overflow-x: hidden;
+    font-size: 18px;
+}
+
+body,html {
+    overflow-x:hidden;
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+}
+
+#subform_email {
+    height:50px;
+    padding:10px;
+}
+
+#subform_email_btn {
+    height:50px;
+    width:120px;
+    font-size:20px;
+}
+
+#subscription_modal br {
+    display:none;
+}
+
+.modal-dialog {
+/*     height:100%; */
+}
+
+.modal-content {
+/*     height:98%; */
+}
+
+.container, .titledr, .homelink, .linkdiv, .linkswrapper, .article, .article img, .sidebar-wrapper, .video_icon, .video_description {
+    width: 100%;
+    float: left;
+    min-width: 100%;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    font-size: 20px;
+    line-height: auto;
+}
+    
+.titlepastor, .titleandrews {font-size: 73px; line-height: 85px;}
+    
+.article_date_div, .article_summary_div { font-size: 17px;}    
+
+.welcomewrapper, .recent_post_div, .navbar-fixed, .collagewrapper, .footer-contact-form, .twitter-sidebar-follow, .twitter-sidebar-body {
+    display: none;
+}
+
+.blog-sidebar {
+    margin-top:50px;
+}
+
+.titlewrapper {
+    margin-top: 0;
+}
+
+.titledr {
+    font-size: 22.5px;
+    letter-spacing: 4px;
+    margin-top: -19px;
+}
+
+.linkswrapper {
+    padding: 0;
+    margin-top: 15px;
+}
+
+.titlelink {
+    padding: 10px 0 10px 0 !important;
+}
+
+.titlelinks {
+    margin-top:10px;
+    font-size: 20px;}
+
+.article_image_div {
+    height: 200px;
+    float: left;
+    width: 180px;
+}
+
+.linkdiv:first-of-type .article_link {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 800;
+    }   
+
+.linkdiv:first-of-type .article_image_div {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.linkdiv:first-of-type .article_image_div:after {
+    content:"New";
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color:#8a525b;
+    color: white;
+    font-size: 25px;
+    border-radius: 0 0 0 30px;
+    top:0;
+    right: 0;
+    text-align: center;
+    font-weight: 600;
+    padding: 7px 0 0 0;
+    }
+
+.linkdiv:first-of-type .article_meta_div {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.article_meta_div {
+    width: calc(100% - 180px);
+    float: right;
+    height: 200px;
+    padding-left: 6px;
+}
+
+.article_link {
+    font-size: 24px;
+    font-weight: 800;
+    }    
+
+    .article_summary_div, .article_summary_div strong {
+        font-weight: 400 !important;
+        font-style: normal;
+        line-height: 20px;
+    }
+
+.site-bg {
+    display: none;
+}
+
+.linkdiv {
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.15);
+    border: none;
+}
+
+.section {
+    background-color: transparent;
+}
+
+.recent_post_div {
+    width: auto;
+}
+
+.footer {height: 195px;}    
+
+.footerdivcontent .titlelink {
+    font-size: 24px;
+    padding: 9px 11px 11px !important
+}
+
+.footer-sm-link {
+    width: 30px;
+    height: 30px;
+}
+
+.bg-blog-1 {
+    border-top: 5px solid #957C80;
+}
+
+.articlewrapper {
+    margin: 0 -16px ;
+    padding: 0 ;
+    width: calc(100% + 32px);
+}
+
+.main-column {
+    padding: 0 30px;
+}
+
+.page-top {
+    height: 280px; margin:-60px -15px; width: calc(100% + 30px) !important;
+}
+    
+.page-top.blog-top {
+    margin:0 -15px;
+    }    
+
+.youtube_icon {  
+    width: 96px;
+    height: 68px; 
+    transform: translateX(-75%); 
+    top: 50%; 
+    left: 50%;
+    }
+
+.header {
+    padding: 30px !important;
+    margin: -92px 0px 0 !important;
+    font-size: 43px;
+}
+
+.abouttext {
+    padding: 15px 30px !important;
+}
+
+.messages_container {
+    padding: 0 20px;
+}
+
+.video_icon {
+    height: 230px;
+}
+
+.video_title {
+    padding: 20px 0;
+}
+
+.video_description {
+    padding: 10px 0;
+}
+
+.messageswrapper {background-color:transparent;}    
+
+.contentwrapper {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-right: -15px;
+    }    
+
+.video_wrapper {
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.2);
+}
+.resources {
+    padding: 0;
+}
+    
+.subform_header {
+    font-size: 60px;
+    font-weight: 200;
+    text-transform: uppercase;
+    }    
+.subform_subheader, .subform_privacy {
+    font-size: 20px;
+    }    
+

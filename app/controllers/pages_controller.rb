@@ -3,7 +3,7 @@ class PagesController < ApplicationController
     require 'nokogiri'
 
 	def index
-        @aBlogList = execute_statement("select * from pastorblog_dev.contents order by published_at desc limit 4;")
+        @aBlogList = execute_statement("select * from pastorblog_dev.contents where state='published' order by published_at desc limit 4;")
         @aArticles = []
 
         @sDomain = "http://#{Rails.configuration.site_url}/"
@@ -21,50 +21,67 @@ class PagesController < ApplicationController
         end
 
         for aBlog in @aBlogList do
-            @aTmp = {}
-            oContent = Nokogiri::HTML.fragment(aBlog[4])
-            oPTag = oContent.search('p')
-            oImg = oContent.search('img')
-            sImg = ""
-            sTxt = ""
-
-            if oPTag.first.search('img').size > 0
-                sTxt = oPTag[1].inner_html
-            else
-                sTxt = oPTag.first.inner_html
-            end
-
-            aRgx = sTxt.split(/(?<=[?.!])/)
-            sTxt = "#{aRgx[0]}#{aRgx[1][0]}"
-
-            if oImg.size > 0
-                eImg = oImg.first
-                sImgSrc = eImg['src']
+            begin
+                @aTmp = {}
+                oContent = Nokogiri::HTML.fragment(aBlog[4])
+                oPTag = oContent.search('p')
+                oImg = oContent.search('img')
+                sImg = ""
+                sTxt = ""
+                sLink = ""
+                sImgSrc = ""
+                sImgName = ""
                 nImgId = 0
+                sDate = ""
+                sTitle = ""
 
-                if sImgSrc != ""
-                    aImgSrc = sImgSrc.split("/")
-                    nImgId = aImgSrc[aImgSrc.size - 2]
+                oDate = Time.parse(aBlog[18].to_s)
+                sMonth = '%02d' % oDate.month
+                sDay = '%02d' % oDate.day
+                sLink = "blog/#{oDate.year}/#{sMonth}/#{sDay}/#{aBlog[10]}"
+                sDate = aBlog[18].strftime("%^b %-d, %Y")
+                sTitle = aBlog[2]
+
+                if oPTag.first.search('img').size > 0
+                    sTxt = oPTag[1].inner_html
+                else
+                    sTxt = oPTag.first.inner_html
                 end
 
-                sImgName = eImg['data-imagename']
-#                logger.debug "IMAGENAME IS: #{eImg['data-imagename']}"
+                logger.debug "\n ---- STXT: #{sTxt} ---- \n"
+
+                if oImg.size > 0
+                    eImg = oImg.first
+                    sImgSrc = eImg['src']
+                    nImgId = 0
+
+                    if sImgSrc != ""
+                        aImgSrc = sImgSrc.split("/")
+                        nImgId = aImgSrc[aImgSrc.size - 2]
+                    end
+
+                    sImgName = eImg['data-imagename']
+                    # logger.debug "IMAGENAME IS: #{eImg['data-imagename']}"
+                end
+
+                aRgx = sTxt.split(/(?<=[?.!])/)
+                if aRgx.size > 0
+                    sTxt = "#{aRgx[0]}#{aRgx[1][0]}"
+                end
+
+            rescue => error
+                logger.debug "\n ---- ERROR PARSING HTML: #{error.message} ---- \n"
+            ensure
+                @aTmp['link']  = sLink
+                @aTmp['title'] = sTitle
+                @aTmp['date']  = sDate
+                @aTmp['text']  = sTxt
+                @aTmp['image_src']  = sImgSrc
+                @aTmp['image_name'] = sImgName
+                @aTmp['image_id']   = nImgId
+
+                @aArticles.push @aTmp
             end
-
-            oDate = Time.parse(aBlog[18].to_s)
-            sMonth = '%02d' % oDate.month
-            sDay = '%02d' % oDate.day
-            sLink = "blog/#{oDate.year}/#{sMonth}/#{sDay}/#{aBlog[10]}"
-
-            @aTmp['link']  = sLink
-            @aTmp['title'] = aBlog[2]
-            @aTmp['date']  = aBlog[18].strftime("%^b %-d, %Y")
-            @aTmp['text']  = sTxt
-            @aTmp['image_src']  = sImgSrc
-            @aTmp['image_name'] = sImgName
-            @aTmp['image_id']   = nImgId
-
-            @aArticles.push @aTmp
         end
 
 	end

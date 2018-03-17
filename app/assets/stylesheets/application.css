@@ -16,6 +16,7 @@
  *= require fusionlib
  *= require slick
  *= require modal-video.min
+ *= require paul-site-mobile
  * require_tree .
  * require_self
  */
