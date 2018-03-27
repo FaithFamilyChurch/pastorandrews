@@ -26,6 +26,8 @@ class PagesController < ApplicationController
                 oContent = Nokogiri::HTML.fragment(aBlog[4])
                 oPTag = oContent.search('p')
                 oImg = oContent.search('img')
+                oSummary = oContent.search('figcaption')
+
                 sImg = ""
                 sTxt = ""
                 sLink = ""
@@ -42,10 +44,8 @@ class PagesController < ApplicationController
                 sDate = aBlog[18].strftime("%^b %-d, %Y")
                 sTitle = aBlog[2]
 
-                if oPTag.first.search('img').size > 0
-                    sTxt = oPTag[1].inner_html
-                else
-                    sTxt = oPTag.first.inner_html
+                if oSummary.size > 0
+                    sTxt = oSummary.first.inner_html
                 end
 
                 logger.debug "\n ---- STXT: #{sTxt} ---- \n"
@@ -62,11 +62,6 @@ class PagesController < ApplicationController
 
                     sImgName = eImg['data-imagename']
                     # logger.debug "IMAGENAME IS: #{eImg['data-imagename']}"
-                end
-
-                aRgx = sTxt.split(/(?<=[?.!])/)
-                if aRgx.size > 0
-                    sTxt = "#{aRgx[0]}#{aRgx[1][0]}"
                 end
 
             rescue => error

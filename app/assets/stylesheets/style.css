@@ -14,6 +14,10 @@ html, body {
     background-color:#f4f4f4;
 }
 
+figcaption {
+    display:none;
+}
+
 a {
 	text-decoration:none !important;
 	outline:none !important;
