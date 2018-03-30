@@ -48,10 +48,10 @@ body,html {
     font-size: 20px;
     line-height: auto;
 }
-    
+
 .titlepastor, .titleandrews {font-size: 73px; line-height: 85px;}
-    
-.article_date_div, .article_summary_div { font-size: 17px;}    
+
+.article_date_div, .article_summary_div { font-size: 17px;}
 
 .welcomewrapper, .recent_post_div, .navbar-fixed, .collagewrapper, .footer-contact-form, .twitter-sidebar-follow, .twitter-sidebar-body {
     display: none;
@@ -85,16 +85,16 @@ body,html {
     font-size: 20px;}
 
 .article_image_div {
-    height: 200px;
     float: left;
     width: 180px;
+    height: 100%;
 }
 
 .linkdiv:first-of-type .article_link {
     font-size: 28px;
     line-height: 40px;
     font-weight: 800;
-    }   
+}
 
 .linkdiv:first-of-type .article_image_div {
     width: 100%;
@@ -134,13 +134,13 @@ body,html {
 .article_link {
     font-size: 24px;
     font-weight: 800;
-    }    
+}
 
-    .article_summary_div, .article_summary_div strong {
-        font-weight: 400 !important;
-        font-style: normal;
-        line-height: 20px;
-    }
+.article_summary_div, .article_summary_div strong {
+    font-weight: 400 !important;
+    font-style: normal;
+    line-height: 20px;
+}
 
 .site-bg {
     display: none;
@@ -151,6 +151,22 @@ body,html {
     background-color: white;
     box-shadow: 0 2px 10px 0 rgba(0,0,0,.15);
     border: none;
+    position: relative;
+}
+
+.linkdiv > a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.linkdiv:first-of-type > a {
+    position: relative;
+}
+
+.linkdiv .article_meta_div {
+    min-height: 200px;
+    height: auto;
 }
 
 .section {
@@ -161,7 +177,7 @@ body,html {
     width: auto;
 }
 
-.footer {height: 195px;}    
+.footer {height: 195px;}
 
 .footerdivcontent .titlelink {
     font-size: 24px;
@@ -190,16 +206,16 @@ body,html {
 .page-top {
     height: 280px; margin:-60px -15px; width: calc(100% + 30px) !important;
 }
-    
+
 .page-top.blog-top {
     margin:0 -15px;
-    }    
+    }
 
-.youtube_icon {  
+.youtube_icon {
     width: 96px;
-    height: 68px; 
-    transform: translateX(-75%); 
-    top: 50%; 
+    height: 68px;
+    transform: translateX(-75%);
+    top: 50%;
     left: 50%;
     }
 
@@ -229,13 +245,13 @@ body,html {
     padding: 10px 0;
 }
 
-.messageswrapper {background-color:transparent;}    
+.messageswrapper {background-color:transparent;}
 
 .contentwrapper {
     width: calc(100% + 30px);
     margin-left: -15px;
     margin-right: -15px;
-    }    
+}
 
 .video_wrapper {
     background-color: #ffffff;
@@ -245,13 +261,12 @@ body,html {
 .resources {
     padding: 0;
 }
-    
+
 .subform_header {
     font-size: 60px;
     font-weight: 200;
     text-transform: uppercase;
-    }    
+}
 .subform_subheader, .subform_privacy {
     font-size: 20px;
-    }    
-
+}
