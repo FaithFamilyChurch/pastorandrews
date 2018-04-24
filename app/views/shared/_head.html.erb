@@ -4,6 +4,7 @@
         <% title = "#{title} - #{controller_name.titleize}" %>
     <% end %>
     <title><%= title %></title>
+    <%= favicon_link_tag asset_path('favicon.png'), :rel => 'icon', :type =>  'image/png' %>
     <%= javascript_include_tag 'application', src="https://www.googletagmanager.com/gtag/js?id=UA-117403746-1", async: true %>
     <%= javascript_tag do %>
         window.dataLayer = window.dataLayer || [];
