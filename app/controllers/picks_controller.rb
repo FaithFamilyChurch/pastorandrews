@@ -1,11 +1,20 @@
 class PicksController < ApplicationController
 
-    def index
-        @aPickList = execute_statement("select * from pastorblog_dev.picks order by created_at desc limit 5;")
 
-        @aPicks = Array.new
+    def index
+
+        #@aColList = execute_statement("select COLUMN_NAME from information_schema.COLUMNS where TABLE_SCHEMA='pastorblog_dev' and TABLE_NAME='picks';")
+
+        #@foo = get_query_results(@aColList)
+
+        @aPickList = execute_statement("select * from pastorblog_dev.picks order by created_at desc limit 5;")
+        @aPicks    = Array.new
+
+
 
         for oPick in @aPickList do
+
+#logger.debug "\n ---- oPick IS: #{oPick} ---- \n"
 
             pick = {}
             pick['id'] = oPick[0]
@@ -27,7 +36,21 @@ class PicksController < ApplicationController
         end
 
         @aPicks.reverse!
-#        @sDomain = "http://#{Rails.configuration.site_url}/"
+
+    end
+
+
+    private
+
+    def get_query_results(oQueryResults)
+
+        results = {}
+
+        for oResult in oQueryResults do
+            results[oResult[0]] = ""
+        end
+        logger.debug "\n ---- RESULTS IS: #{results} ---- \n"
+
     end
 
 end
