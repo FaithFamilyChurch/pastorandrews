@@ -7,7 +7,7 @@ class PicksController < ApplicationController
 
         #@foo = get_query_results(@aColList)
 
-        @aPickList = execute_statement("select * from pastorblog_dev.picks order by created_at desc limit 5;")
+        @aPickList = execute_statement("select * from pastorblog_dev.picks where active = 1 order by created_at desc limit 5;")
         @aPicks    = Array.new
 
 
@@ -35,7 +35,7 @@ class PicksController < ApplicationController
             @aPicks.push(pick)
         end
 
-        @aPicks.reverse!
+        #@aPicks.reverse!
 
     end
 
