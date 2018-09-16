@@ -8,15 +8,17 @@
         <% @aVideos.each do |oVideo| %>
             <% sUrlPath = "https://www.youtube.com/watch?v=#{oVideo['resourceId']['videoId']}" %>
             <div class="video_wrapper">
-                <div class="video_icon">
+                <div class="video_icon media-left">
                     <button class="video_icon_link js-modal-btn" style="background:url(<%= oVideo['thumbnails']['medium']['url'] %>)" data-video-id="<%= oVideo['resourceId']['videoId'] %>">
                         <span class="youtube_icon"></span>
                     </button>
                 </div>
-                <div class="video_title">
-                    <a class="js-modal-btn" data-video-id="<%= oVideo['resourceId']['videoId'] %>"><%= oVideo['title'] %></a>
+                <div class="media-body">
+                    <div class="video_title">
+                        <a class="js-modal-btn" data-video-id="<%= oVideo['resourceId']['videoId'] %>"><%= oVideo['title'] %></a>
+                    </div>
+                    <div class="video_description"><%= oVideo['description'] %></div>
                 </div>
-                <div class="video_description"><%= oVideo['description'] %></div>
             </div>
         <% end %>
 

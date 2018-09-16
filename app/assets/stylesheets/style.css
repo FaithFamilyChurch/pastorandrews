@@ -1091,7 +1091,7 @@ pTitle {
 }
 
 .video_title {
-    padding: 10px 30px;
+    padding: 0px 30px;
     float: left;
     font-size: 22px;
     font-weight: 400;
@@ -1109,7 +1109,7 @@ pTitle {
 .video_description {
     float: left;
     padding: 10px 30px;
-    width: calc(100% - 260px);
+/*     width: calc(100% - 260px); */
 }
 
 .video_wrapper {
