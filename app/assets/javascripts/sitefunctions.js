@@ -1,6 +1,6 @@
 
 // $( document ).ready(function() {
-jQuery( document ).on('turbolinks:load', function()
+$( document ).on('turbolinks:load', function()
 {
     //var oDeadline = new Date(Date.parse("Feb 18, 2018 00:00:00"));
     //initializeClock('clockdiv', oDeadline);

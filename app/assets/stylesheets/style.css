@@ -24,6 +24,17 @@ a {
 }
 *:focus {outline:0;}
 
+
+.entry-content a {
+    text-decoration: none;
+    color:#4582ec;
+}
+
+.entry-content a:hover {
+    text-decoration: underline !important;
+}
+
+
 /*button:focus {outline:0;}
 input:focus {outline:0;}
 a:focus {outline:0;}*/
